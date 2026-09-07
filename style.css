@@ -204,7 +204,7 @@ nav a:hover{
 
 
 /* =========================
-   IMAGEN GRANDE HERO
+   IMAGEN HERO
 ========================= */
 
 .art{
@@ -337,7 +337,7 @@ nav a:hover{
     display:flex;
     flex-direction:column;
 
-    min-height:330px;
+    min-height:360px;
 
     transition:
         transform .2s ease,
@@ -360,18 +360,12 @@ nav a:hover{
 
 
 /* =========================
-   ICONOS GRANDES FAUCETS
+   ICONOS GRANDES
 ========================= */
 
-/*
-   El área del logo ahora es grande.
-   El PNG ocupa prácticamente todo
-   el círculo sin deformarse.
-*/
-
 .circle{
-    width:105px;
-    height:105px;
+    width:125px;
+    height:125px;
 
     flex-shrink:0;
 
@@ -389,11 +383,15 @@ nav a:hover{
 
     border:1px solid #273657;
 
-    padding:3px;
+    padding:0;
+
+    position:relative;
 }
 
 
-/* PNG */
+/*
+   EL PNG OCUPA TODO EL CÍRCULO
+*/
 
 .circle img{
     width:100%;
@@ -407,6 +405,18 @@ nav a:hover{
     margin:0;
 
     display:block;
+}
+
+
+/*
+   Algunos PNG tienen espacio
+   transparente alrededor.
+   Esta regla permite que
+   aprovechen mejor el área.
+*/
+
+.circle img[src$=".png"]{
+    transform:scale(1.12);
 }
 
 
@@ -494,13 +504,13 @@ nav a:hover{
 
     display:grid;
 
-    grid-template-columns:68px 1fr auto;
+    grid-template-columns:82px 1fr auto;
 
-    gap:14px;
+    gap:15px;
 
     align-items:center;
 
-    min-height:78px;
+    min-height:100px;
 
     transition:
         transform .2s ease,
@@ -519,12 +529,12 @@ nav a:hover{
 ========================= */
 
 .list article>b{
-    width:68px;
-    height:68px;
+    width:82px;
+    height:82px;
 
-    border-radius:12px;
+    border-radius:14px;
 
-    background:#148fd8;
+    background:#17213a;
 
     display:flex;
 
@@ -533,9 +543,11 @@ nav a:hover{
 
     overflow:hidden;
 
-    padding:2px;
+    padding:0;
 
     flex-shrink:0;
+
+    border:1px solid #273657;
 }
 
 .list article>b img{
@@ -549,9 +561,11 @@ nav a:hover{
     padding:0;
     margin:0;
 
-    border-radius:10px;
+    border-radius:12px;
 
     display:block;
+
+    transform:scale(1.10);
 }
 
 
@@ -644,13 +658,15 @@ nav a:hover{
 }
 
 .how>div{
-    padding:30px;
+    padding:38px;
 }
 
 .how h2{
     margin-top:0;
 
-    margin-bottom:25px;
+    margin-bottom:30px;
+
+    font-size:28px;
 }
 
 .steps{
@@ -658,21 +674,21 @@ nav a:hover{
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:25px;
+    gap:35px;
 }
 
 .steps>div{
     display:flex;
 
-    gap:12px;
+    gap:15px;
 
     align-items:flex-start;
 }
 
 .steps b{
-    min-width:38px;
+    min-width:46px;
 
-    height:38px;
+    height:46px;
 
     border:1px solid #7358ff;
 
@@ -684,7 +700,7 @@ nav a:hover{
 
     color:#a594ff;
 
-    font-size:14px;
+    font-size:16px;
 }
 
 .steps strong,
@@ -693,17 +709,17 @@ nav a:hover{
 }
 
 .steps strong{
-    font-size:12px;
+    font-size:14px;
 }
 
 .steps small{
     color:#8993a7;
 
-    margin-top:5px;
+    margin-top:7px;
 
-    font-size:10px;
+    font-size:11px;
 
-    line-height:1.5;
+    line-height:1.6;
 }
 
 
@@ -783,26 +799,21 @@ footer{
     .steps{
         grid-template-columns:1fr;
 
-        gap:20px;
+        gap:25px;
     }
 
-    /*
-       Logos un poco más pequeños
-       para tablets
-    */
-
     .circle{
-        width:100px;
-        height:100px;
+        width:115px;
+        height:115px;
     }
 
     .list article{
-        grid-template-columns:64px 1fr auto;
+        grid-template-columns:76px 1fr auto;
     }
 
     .list article>b{
-        width:64px;
-        height:64px;
+        width:76px;
+        height:76px;
     }
 
 }
@@ -878,7 +889,11 @@ footer{
     }
 
     .how>div{
-        padding:22px;
+        padding:25px;
+    }
+
+    .how h2{
+        font-size:24px;
     }
 
     .title{
@@ -901,14 +916,14 @@ footer{
     ========================= */
 
     .circle{
-        width:100px;
-        height:100px;
+        width:115px;
+        height:115px;
 
         margin-bottom:10px;
     }
 
     .card{
-        min-height:320px;
+        min-height:350px;
     }
 
 
@@ -917,14 +932,14 @@ footer{
     ========================= */
 
     .list article{
-        grid-template-columns:64px 1fr;
+        grid-template-columns:76px 1fr;
 
-        min-height:82px;
+        min-height:95px;
     }
 
     .list article>b{
-        width:64px;
-        height:64px;
+        width:76px;
+        height:76px;
     }
 
     .list article>a{
@@ -959,27 +974,33 @@ footer{
     }
 
 
-    /* ICONOS */
+    /* =========================
+       ICONOS GRANDES
+    ========================= */
 
     .circle{
-        width:92px;
-        height:92px;
+        width:105px;
+        height:105px;
     }
 
     .card{
-        min-height:315px;
+        min-height:340px;
     }
 
 
-    /* LISTAS */
+    /* =========================
+       LISTAS
+    ========================= */
 
     .list article{
-        grid-template-columns:58px 1fr;
+        grid-template-columns:68px 1fr;
+
+        min-height:88px;
     }
 
     .list article>b{
-        width:58px;
-        height:58px;
+        width:68px;
+        height:68px;
     }
 
     .list article>a{
@@ -989,7 +1010,9 @@ footer{
     }
 
 
-    /* ESTADÍSTICAS */
+    /* =========================
+       ESTADÍSTICAS
+    ========================= */
 
     .stats{
         padding:15px;
