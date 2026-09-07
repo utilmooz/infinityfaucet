@@ -732,13 +732,18 @@ nav a:hover{
 
     transition:
         transform .2s ease,
-        border-color .2s ease;
+        border-color .2s ease,
+        box-shadow .2s ease;
 }
 
 .list article:hover{
+
     transform:translateY(-2px);
 
     border-color:#493f9e;
+
+    box-shadow:
+        0 8px 24px #00000033;
 }
 
 
@@ -806,27 +811,64 @@ nav a:hover{
     line-height:1.5;
 }
 
+
+/* =========================
+   BOTONES VISITAR
+   MINERÍA + ENCUESTAS
+========================= */
+
 .list article>a{
-    border:1px solid #5346db;
 
-    color:#a59bff;
+    background:linear-gradient(
+        100deg,
+        #463cff,
+        #7935e7
+    );
 
-    border-radius:6px;
+    border:1px solid #6659ff;
 
-    padding:8px 12px;
+    color:#fff;
 
-    font-size:9px;
+    border-radius:8px;
 
-    font-weight:bold;
+    padding:12px 22px;
+
+    min-width:110px;
+
+    text-align:center;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.3px;
+
+    box-shadow:
+        0 6px 20px #463cff44;
 
     transition:
-        background .2s ease,
-        color .2s ease;
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease,
+        background .2s ease;
 }
 
 .list article>a:hover{
-    background:#5346db;
+
+    background:linear-gradient(
+        100deg,
+        #554aff,
+        #8a42f0
+    );
+
+    border-color:#8074ff;
+
     color:#fff;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 9px 28px #463cff70;
 }
 
 
@@ -1023,6 +1065,14 @@ footer{
         width:76px;
         height:76px;
     }
+
+    /* BOTONES VISITAR TABLET */
+
+    .list article>a{
+        min-width:105px;
+        padding:11px 17px;
+        font-size:10px;
+    }
 }
 
 
@@ -1037,6 +1087,7 @@ footer{
     }
 
     nav{
+
         display:none;
 
         position:absolute;
@@ -1169,19 +1220,45 @@ footer{
     ========================= */
 
     .list article{
+
         grid-template-columns:76px 1fr;
 
         min-height:95px;
+
+        gap:12px;
     }
 
     .list article>b{
+
         width:76px;
         height:76px;
     }
 
+
+    /* =========================
+       BOTONES VISITAR CELULAR
+    ========================= */
+
     .list article>a{
+
         grid-column:2;
+
+        width:100%;
+
+        min-width:0;
+
+        padding:13px 20px;
+
+        font-size:11px;
+
+        font-weight:800;
+
+        border-radius:8px;
+
         text-align:center;
+
+        box-shadow:
+            0 6px 20px #463cff44;
     }
 }
 
@@ -1201,7 +1278,7 @@ footer{
     }
 
 
-    /* BOTONES */
+    /* BOTONES HERO */
 
     .main-buttons,
     .support-buttons{
@@ -1229,18 +1306,34 @@ footer{
     /* LISTAS */
 
     .list article{
+
         grid-template-columns:68px 1fr;
+
         min-height:88px;
+
+        gap:10px;
     }
 
     .list article>b{
+
         width:68px;
         height:68px;
     }
 
+
+    /* BOTONES VISITAR PEQUEÑO */
+
     .list article>a{
+
         grid-column:2;
-        text-align:center;
+
+        width:100%;
+
+        padding:12px 16px;
+
+        font-size:10px;
+
+        min-width:0;
     }
 
 
