@@ -2,79 +2,172 @@
 <html lang="es">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <meta name="description" content="Infinity Faucet - Faucets, minería y encuestas pagadas para ganar criptomonedas">
+    <meta
+        name="description"
+        content="Infinity Faucet - Faucets, minería y encuestas pagadas para ganar criptomonedas"
+    >
 
     <title>Infinity Faucet | Gana Crypto Cada Día</title>
 
     <link rel="stylesheet" href="style.css">
 
     <style>
+
         /* =========================
            BOTONES DEL HERO
         ========================= */
 
         .actions {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: auto auto;
             gap: 12px;
-            margin-top: 25px;
+            margin-top: 28px;
+            width: max-content;
         }
 
-        /* Primera fila: Faucets + Minería */
+
+        /* =========================
+           PRIMERA FILA
+           FAUCETS + MINERÍA
+        ========================= */
+
         .actions .primary,
         .actions .secondary {
-            flex: 0 0 auto;
+            grid-row: 1;
         }
 
-        /* Segunda fila: Donaciones */
+
+        /* =========================
+           SEGUNDA FILA
+           DONACIONES
+        ========================= */
+
         .actions .donate-btn,
         .actions .paypal {
-            flex: 0 0 auto;
-            background: linear-gradient(135deg, #ff8a00, #ff5a00);
+            grid-row: 2;
+
+            background: linear-gradient(
+                135deg,
+                #ff8a00,
+                #ff5a00
+            );
+
             color: #ffffff;
-            border: 1px solid #ff8a00;
-            box-shadow: 0 8px 25px #ff6a0028;
+
+            border: 1px solid #ff9a22;
+
+            box-shadow:
+                0 6px 20px #ff6a0038;
+
+            position: relative;
+
+            overflow: hidden;
         }
+
+
+        /* =========================
+           HOVER DONACIONES
+        ========================= */
 
         .actions .donate-btn:hover,
         .actions .paypal:hover {
-            background: linear-gradient(135deg, #ff9d2e, #ff6500);
+
+            background: linear-gradient(
+                135deg,
+                #ff9d2e,
+                #ff6500
+            );
+
             color: #ffffff;
+
+            border-color: #ffb45c;
+
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px #ff6a0040;
+
+            box-shadow:
+                0 9px 28px #ff6a0055;
         }
 
-        /* Hace que las donaciones comiencen debajo */
-        .actions .donate-btn {
-            margin-left: 0;
+
+        /* =========================
+           EFECTO DE BRILLO
+        ========================= */
+
+        .actions .donate-btn::before,
+        .actions .paypal::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: -120%;
+
+            width: 70%;
+            height: 100%;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #ffffff35,
+                transparent
+            );
+
+            transform: skewX(-20deg);
+
+            transition: left .6s ease;
         }
 
-        /* Separación visual entre filas */
-        .actions .donate-btn {
-            margin-top: 2px;
+
+        .actions .donate-btn:hover::before,
+        .actions .paypal:hover::before {
+
+            left: 140%;
         }
 
-        @media (max-width: 600px) {
+
+        /* =========================
+           MÓVIL
+        ========================= */
+
+        @media (max-width: 650px) {
 
             .actions {
-                flex-direction: row;
+
+                display: grid;
+
+                grid-template-columns: 1fr;
+
+                width: 100%;
+
+                gap: 10px;
             }
+
 
             .actions .primary,
             .actions .secondary,
             .actions .donate-btn,
             .actions .paypal {
-                flex: 1 1 100%;
+
+                grid-column: 1;
+
+                grid-row: auto;
+
+                width: 100%;
+
                 text-align: center;
             }
 
         }
+
     </style>
 
 </head>
+
 
 <body>
 
@@ -92,8 +185,14 @@
             <b>∞</b>
 
             <span>
-                <strong>INFINITY</strong> <i>FAUCET</i>
-                <small>GANA CRYPTO CADA DÍA</small>
+
+                <strong>INFINITY</strong>
+                <i>FAUCET</i>
+
+                <small>
+                    GANA CRYPTO CADA DÍA
+                </small>
+
             </span>
 
         </a>
@@ -101,27 +200,44 @@
 
         <nav id="nav">
 
-            <a href="#inicio">INICIO</a>
+            <a href="#inicio">
+                INICIO
+            </a>
 
-            <a href="#faucets">FAUCETS</a>
+            <a href="#faucets">
+                FAUCETS
+            </a>
 
-            <a href="#mineria">MINERÍA</a>
+            <a href="#mineria">
+                MINERÍA
+            </a>
 
-            <a href="#encuestas">ENCUESTAS</a>
+            <a href="#encuestas">
+                ENCUESTAS
+            </a>
 
-            <a href="#recomendados">RECOMENDADOS</a>
+            <a href="#recomendados">
+                RECOMENDADOS
+            </a>
 
-            <a href="#como-funciona">CÓMO FUNCIONA</a>
+            <a href="#como-funciona">
+                CÓMO FUNCIONA
+            </a>
 
         </nav>
 
 
-        <button class="menu" onclick="menu()">☰</button>
+        <button
+            class="menu"
+            onclick="menu()"
+            aria-label="Abrir menú"
+        >
+            ☰
+        </button>
 
     </div>
 
 </header>
-
 
 
 <main>
@@ -134,6 +250,7 @@
 <section id="inicio" class="hero">
 
     <div class="wrap hero-grid">
+
 
         <div>
 
@@ -160,27 +277,39 @@
 
 
             <!-- =========================
-                 BOTONES PRINCIPALES
+                 BOTONES
             ========================= -->
 
             <div class="actions">
 
+
                 <!-- FILA 1 -->
 
-                <a class="btn primary" href="#faucets">
+                <a
+                    class="btn primary"
+                    href="#faucets"
+                >
                     💧 VER FAUCETS
                 </a>
 
-                <a class="btn secondary" href="#mineria">
+
+                <a
+                    class="btn secondary"
+                    href="#mineria"
+                >
                     ⛏ VER MINERÍA
                 </a>
 
 
                 <!-- FILA 2 -->
 
-                <a class="btn donate-btn" href="donar.html">
+                <a
+                    class="btn donate-btn"
+                    href="donar.html"
+                >
                     💜 DONAR CON CRYPTO
                 </a>
+
 
                 <a
                     class="btn paypal"
@@ -191,8 +320,8 @@
                     💙 DONAR CON PAYPAL
                 </a>
 
-            </div>
 
+            </div>
 
 
             <div class="trust">
@@ -204,7 +333,9 @@
 
                     <span>
 
-                        <b>Sitios seleccionados</b>
+                        <b>
+                            Sitios seleccionados
+                        </b>
 
                         <small>
                             Plataformas para explorar
@@ -215,14 +346,15 @@
                 </div>
 
 
-
                 <div>
 
                     ⚡
 
                     <span>
 
-                        <b>Opciones crypto</b>
+                        <b>
+                            Opciones crypto
+                        </b>
 
                         <small>
                             Distintas formas de ganar
@@ -233,14 +365,15 @@
                 </div>
 
 
-
                 <div>
 
                     👥
 
                     <span>
 
-                        <b>Actualizaciones</b>
+                        <b>
+                            Actualizaciones
+                        </b>
 
                         <small>
                             Nuevos sitios regularmente
@@ -256,7 +389,6 @@
         </div>
 
 
-
         <!-- =========================
              IMAGEN HERO
         ========================= -->
@@ -270,10 +402,10 @@
 
         </div>
 
+
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -285,7 +417,9 @@
 
     <div>
 
-        <b>+12,450</b>
+        <b>
+            +12,450
+        </b>
 
         <small>
             Usuarios
@@ -294,10 +428,11 @@
     </div>
 
 
-
     <div>
 
-        <b>+98,230</b>
+        <b>
+            +98,230
+        </b>
 
         <small>
             Clics
@@ -306,10 +441,11 @@
     </div>
 
 
-
     <div>
 
-        <b>17+</b>
+        <b>
+            17+
+        </b>
 
         <small>
             Sitios
@@ -318,10 +454,11 @@
     </div>
 
 
-
     <div>
 
-        <b>Activo</b>
+        <b>
+            Activo
+        </b>
 
         <small>
             Directorio
@@ -333,12 +470,14 @@
 </section>
 
 
-
 <!-- =========================
      FAUCETS
 ========================= -->
 
-<section id="faucets" class="wrap section">
+<section
+    id="faucets"
+    class="wrap section"
+>
 
 
     <div class="title">
@@ -361,7 +500,6 @@
         </a>
 
     </div>
-
 
 
     <div class="cards">
@@ -420,7 +558,6 @@
         </article>
 
 
-
         <!-- =========================
              2. FIREFAUCET
         ========================= -->
@@ -472,7 +609,6 @@
             </a>
 
         </article>
-
 
 
         <!-- =========================
@@ -528,7 +664,6 @@
         </article>
 
 
-
         <!-- =========================
              4. FAUCETCRYPTO
         ========================= -->
@@ -580,7 +715,6 @@
             </a>
 
         </article>
-
 
 
         <!-- =========================
@@ -636,7 +770,6 @@
         </article>
 
 
-
         <!-- =========================
              6. ROLLERCOIN
         ========================= -->
@@ -688,7 +821,6 @@
             </a>
 
         </article>
-
 
 
         <!-- =========================
@@ -744,7 +876,6 @@
         </article>
 
 
-
         <!-- =========================
              8. STAKECUBE
         ========================= -->
@@ -796,7 +927,6 @@
             </a>
 
         </article>
-
 
 
         <!-- =========================
@@ -857,12 +987,14 @@
 </section>
 
 
-
 <!-- =========================
      MINERÍA
 ========================= -->
 
-<section id="mineria" class="wrap section">
+<section
+    id="mineria"
+    class="wrap section"
+>
 
 
     <div class="title">
@@ -885,7 +1017,6 @@
         </a>
 
     </div>
-
 
 
     <div class="list">
@@ -911,7 +1042,6 @@
                     Kryptex
                 </strong>
 
-
                 <small>
                     Minería de criptomonedas.
                     <br>
@@ -930,7 +1060,6 @@
             </a>
 
         </article>
-
 
 
         <!-- NICEHASH -->
@@ -953,7 +1082,6 @@
                     NiceHash
                 </strong>
 
-
                 <small>
                     Plataforma relacionada con minería.
                     <br>
@@ -972,7 +1100,6 @@
             </a>
 
         </article>
-
 
 
         <!-- UNMINEABLE -->
@@ -995,7 +1122,6 @@
                     unMineable
                 </strong>
 
-
                 <small>
                     Minería de criptomonedas.
                     <br>
@@ -1014,7 +1140,6 @@
             </a>
 
         </article>
-
 
 
         <!-- CUDO MINER -->
@@ -1036,7 +1161,6 @@
                 <strong>
                     Cudo Miner
                 </strong>
-
 
                 <small>
                     Software y plataforma de minería.
@@ -1063,12 +1187,14 @@
 </section>
 
 
-
 <!-- =========================
      ENCUESTAS
 ========================= -->
 
-<section id="encuestas" class="wrap section">
+<section
+    id="encuestas"
+    class="wrap section"
+>
 
 
     <div class="title">
@@ -1091,7 +1217,6 @@
         </a>
 
     </div>
-
 
 
     <div class="list">
@@ -1117,7 +1242,6 @@
                     ySense
                 </strong>
 
-
                 <small>
                     Encuestas, ofertas y tareas.
                     <br>
@@ -1136,7 +1260,6 @@
             </a>
 
         </article>
-
 
 
         <!-- PROLIFIC -->
@@ -1159,7 +1282,6 @@
                     Prolific
                 </strong>
 
-
                 <small>
                     Estudios y encuestas online.
                     <br>
@@ -1178,7 +1300,6 @@
             </a>
 
         </article>
-
 
 
         <!-- SWAGBUCKS -->
@@ -1201,7 +1322,6 @@
                     Swagbucks
                 </strong>
 
-
                 <small>
                     Encuestas, ofertas, juegos y tareas.
                     <br>
@@ -1220,7 +1340,6 @@
             </a>
 
         </article>
-
 
 
         <!-- TOLUNA -->
@@ -1242,7 +1361,6 @@
                 <strong>
                     Toluna Influencers
                 </strong>
-
 
                 <small>
                     Encuestas y opiniones online.
@@ -1269,12 +1387,14 @@
 </section>
 
 
-
 <!-- =========================
      RECOMENDADOS
 ========================= -->
 
-<section id="recomendados" class="wrap section">
+<section
+    id="recomendados"
+    class="wrap section"
+>
 
 
     <div class="recommend">
@@ -1304,16 +1424,17 @@
 </section>
 
 
-
 <!-- =========================
      COMO FUNCIONA
 ========================= -->
 
-<section id="como-funciona" class="wrap section">
+<section
+    id="como-funciona"
+    class="wrap section"
+>
 
 
     <div class="how">
-
 
         <div>
 
@@ -1322,21 +1443,20 @@
             </h2>
 
 
-
             <div class="steps">
 
 
                 <div>
 
-                    <b>1</b>
-
+                    <b>
+                        1
+                    </b>
 
                     <span>
 
                         <strong>
                             Elige un sitio
                         </strong>
-
 
                         <small>
                             Encuentra la plataforma que más te interese.
@@ -1347,18 +1467,17 @@
                 </div>
 
 
-
                 <div>
 
-                    <b>2</b>
-
+                    <b>
+                        2
+                    </b>
 
                     <span>
 
                         <strong>
                             Regístrate
                         </strong>
-
 
                         <small>
                             Accede al sitio oficial y crea tu cuenta.
@@ -1369,18 +1488,17 @@
                 </div>
 
 
-
                 <div>
 
-                    <b>3</b>
-
+                    <b>
+                        3
+                    </b>
 
                     <span>
 
                         <strong>
                             Gana
                         </strong>
-
 
                         <small>
                             Completa las tareas disponibles y recibe tus recompensas.
@@ -1400,9 +1518,7 @@
 </section>
 
 
-
 </main>
-
 
 
 <!-- =========================
@@ -1414,13 +1530,24 @@
     <div class="wrap footer">
 
 
-        <a class="brand" href="index.html">
+        <a
+            class="brand"
+            href="index.html"
+        >
 
-            <b>∞</b>
+            <b>
+                ∞
+            </b>
 
             <span>
 
-                <strong>INFINITY</strong> <i>FAUCET</i>
+                <strong>
+                    INFINITY
+                </strong>
+
+                <i>
+                    FAUCET
+                </i>
 
                 <small>
                     GANA CRYPTO CADA DÍA
@@ -1429,7 +1556,6 @@
             </span>
 
         </a>
-
 
 
         <div>
@@ -1459,7 +1585,6 @@
         </div>
 
 
-
         <p>
             © <span id="year"></span> Infinity Faucet.
         </p>
@@ -1468,7 +1593,6 @@
     </div>
 
 </footer>
-
 
 
 <script src="script.js"></script>
