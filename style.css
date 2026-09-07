@@ -165,7 +165,7 @@ nav a:hover{
 }
 
 
-/* FILA PRINCIPAL */
+/* FILA SUPERIOR */
 
 .main-buttons{
     display:grid;
@@ -178,7 +178,7 @@ nav a:hover{
 }
 
 
-/* FILA DONACIONES */
+/* FILA INFERIOR */
 
 .support-buttons{
     display:grid;
@@ -190,10 +190,6 @@ nav a:hover{
     width:100%;
 }
 
-
-/* =========================
-   BOTONES GENERALES
-========================= */
 
 .btn{
     padding:13px 19px;
@@ -222,10 +218,11 @@ nav a:hover{
 
 /* =========================
    VER FAUCETS
-   AZUL / VIOLETA ORIGINAL
+   VIOLETA ORIGINAL
 ========================= */
 
 .primary{
+
     background:linear-gradient(
         100deg,
         #463cff,
@@ -241,13 +238,14 @@ nav a:hover{
 }
 
 .primary:hover{
+
     background:linear-gradient(
         100deg,
         #5148ff,
-        #8745ed
+        #853ff0
     );
 
-    border-color:#8177ff;
+    border-color:#8378ff;
 
     box-shadow:
         0 8px 28px #463cff66;
@@ -260,6 +258,7 @@ nav a:hover{
 ========================= */
 
 .secondary{
+
     background:#10182b;
 
     border:1px solid #53617e;
@@ -271,6 +270,7 @@ nav a:hover{
 }
 
 .secondary:hover{
+
     background:#17223a;
 
     border-color:#7d8fb8;
@@ -285,7 +285,8 @@ nav a:hover{
    NARANJA
 ========================= */
 
-.donate{
+.donate,
+.donate-btn{
 
     background:linear-gradient(
         100deg,
@@ -303,11 +304,10 @@ nav a:hover{
     position:relative;
 
     overflow:hidden;
-
-    font-weight:800;
 }
 
-.donate:hover{
+.donate:hover,
+.donate-btn:hover{
 
     background:linear-gradient(
         100deg,
@@ -323,7 +323,7 @@ nav a:hover{
 
 
 /* =========================
-   DONAR CON PAYPAL
+   DONAR PAYPAL
    NARANJA
 ========================= */
 
@@ -345,8 +345,6 @@ nav a:hover{
     position:relative;
 
     overflow:hidden;
-
-    font-weight:800;
 }
 
 .paypal:hover{
@@ -368,7 +366,14 @@ nav a:hover{
    EFECTO BRILLO DONACIONES
 ========================= */
 
+.donate,
+.donate-btn,
+.paypal{
+    font-weight:800;
+}
+
 .donate::before,
+.donate-btn::before,
 .paypal::before{
 
     content:"";
@@ -394,6 +399,7 @@ nav a:hover{
 }
 
 .donate:hover::before,
+.donate-btn:hover::before,
 .paypal:hover::before{
     left:130%;
 }
@@ -476,7 +482,6 @@ nav a:hover{
 
 .stats{
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
 
     background:#0b1120;
@@ -523,9 +528,7 @@ nav a:hover{
 
 .title{
     display:flex;
-
     justify-content:space-between;
-
     align-items:end;
 
     margin-bottom:17px;
@@ -553,14 +556,11 @@ nav a:hover{
 
 .cards{
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:14px;
 }
 
 .card{
-
     background:#0b1222;
 
     border:1px solid #1b2742;
@@ -570,7 +570,6 @@ nav a:hover{
     padding:17px;
 
     display:flex;
-
     flex-direction:column;
 
     min-height:360px;
@@ -582,7 +581,6 @@ nav a:hover{
 }
 
 .card:hover{
-
     transform:translateY(-4px);
 
     border-color:#493f9e;
@@ -601,7 +599,6 @@ nav a:hover{
 ========================= */
 
 .circle{
-
     width:125px;
     height:125px;
 
@@ -610,7 +607,6 @@ nav a:hover{
     border-radius:50%;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -628,12 +624,10 @@ nav a:hover{
 }
 
 .circle img{
-
     width:100%;
     height:100%;
 
     object-fit:contain;
-
     object-position:center;
 
     padding:0;
@@ -652,7 +646,6 @@ nav a:hover{
 ========================= */
 
 .card h3{
-
     text-align:center;
 
     margin:8px 0 5px;
@@ -663,7 +656,6 @@ nav a:hover{
 }
 
 .chips{
-
     text-align:center;
 
     background:#161f34;
@@ -678,7 +670,6 @@ nav a:hover{
 }
 
 .card p{
-
     color:#99a3b7;
 
     font-size:11px;
@@ -691,16 +682,12 @@ nav a:hover{
 }
 
 .card small{
-
     color:#579dff;
-
     font-size:10px;
 }
 
 .card>b{
-
     font-size:12px;
-
     margin-bottom:12px;
 }
 
@@ -714,23 +701,17 @@ nav a:hover{
 ========================= */
 
 .two{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:28px;
 }
 
 .list{
-
     display:grid;
-
     gap:10px;
 }
 
 .list article{
-
     background:#0b1222;
 
     border:1px solid #1b2742;
@@ -755,7 +736,6 @@ nav a:hover{
 }
 
 .list article:hover{
-
     transform:translateY(-2px);
 
     border-color:#493f9e;
@@ -767,7 +747,6 @@ nav a:hover{
 ========================= */
 
 .list article>b{
-
     width:82px;
     height:82px;
 
@@ -790,12 +769,10 @@ nav a:hover{
 }
 
 .list article>b img{
-
     width:100%;
     height:100%;
 
     object-fit:contain;
-
     object-position:center;
 
     padding:0;
@@ -814,16 +791,12 @@ nav a:hover{
 ========================= */
 
 .list strong{
-
     font-size:14px;
-
     display:block;
-
     margin-bottom:2px;
 }
 
 .list small{
-
     display:block;
 
     color:#8993a7;
@@ -834,7 +807,6 @@ nav a:hover{
 }
 
 .list article>a{
-
     border:1px solid #5346db;
 
     color:#a59bff;
@@ -853,9 +825,7 @@ nav a:hover{
 }
 
 .list article>a:hover{
-
     background:#5346db;
-
     color:#fff;
 }
 
@@ -865,7 +835,6 @@ nav a:hover{
 ========================= */
 
 .recommend{
-
     padding:30px;
 
     background:#0d1427;
@@ -881,7 +850,6 @@ nav a:hover{
 
 .recommend li{
     color:#a9b2c5;
-
     margin-bottom:8px;
 }
 
@@ -891,7 +859,6 @@ nav a:hover{
 ========================= */
 
 .how{
-
     width:100%;
 
     border:1px solid #202b45;
@@ -908,16 +875,12 @@ nav a:hover{
 }
 
 .how h2{
-
     margin-top:0;
-
     margin-bottom:30px;
-
     font-size:28px;
 }
 
 .steps{
-
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
@@ -926,7 +889,6 @@ nav a:hover{
 }
 
 .steps>div{
-
     display:flex;
 
     gap:15px;
@@ -935,7 +897,6 @@ nav a:hover{
 }
 
 .steps b{
-
     min-width:46px;
 
     height:46px;
@@ -963,7 +924,6 @@ nav a:hover{
 }
 
 .steps small{
-
     color:#8993a7;
 
     margin-top:7px;
@@ -979,7 +939,6 @@ nav a:hover{
 ========================= */
 
 footer{
-
     border-top:1px solid #18223a;
 
     padding:30px 0;
@@ -990,7 +949,6 @@ footer{
 }
 
 .footer{
-
     display:flex;
 
     justify-content:space-between;
@@ -1026,9 +984,7 @@ footer{
     }
 
     .art{
-
         min-height:280px;
-
         margin-top:20px;
     }
 
@@ -1037,9 +993,7 @@ footer{
     }
 
     .stats{
-
         grid-template-columns:repeat(2,1fr);
-
         gap:15px;
     }
 
@@ -1052,29 +1006,23 @@ footer{
     }
 
     .steps{
-
         grid-template-columns:1fr;
-
         gap:25px;
     }
 
     .circle{
-
         width:115px;
         height:115px;
     }
 
     .list article{
-
         grid-template-columns:76px 1fr auto;
     }
 
     .list article>b{
-
         width:76px;
         height:76px;
     }
-
 }
 
 
@@ -1089,7 +1037,6 @@ footer{
     }
 
     nav{
-
         display:none;
 
         position:absolute;
@@ -1125,9 +1072,7 @@ footer{
     }
 
     .art{
-
         min-height:240px;
-
         margin-top:10px;
     }
 
@@ -1136,9 +1081,7 @@ footer{
     }
 
     .trust{
-
         display:grid;
-
         grid-template-columns:1fr;
     }
 
@@ -1159,18 +1102,13 @@ footer{
     }
 
     .title{
-
         align-items:flex-start;
-
         gap:15px;
-
         flex-direction:column;
     }
 
     .footer{
-
         align-items:flex-start;
-
         flex-direction:column;
     }
 
@@ -1180,13 +1118,10 @@ footer{
     ========================= */
 
     .actions{
-
         width:100%;
-
         max-width:none;
 
         display:flex;
-
         flex-direction:column;
 
         gap:10px;
@@ -1205,7 +1140,6 @@ footer{
     }
 
     .actions .btn{
-
         width:100%;
 
         padding:13px 8px;
@@ -1219,7 +1153,6 @@ footer{
     ========================= */
 
     .circle{
-
         width:115px;
         height:115px;
 
@@ -1236,25 +1169,20 @@ footer{
     ========================= */
 
     .list article{
-
         grid-template-columns:76px 1fr;
 
         min-height:95px;
     }
 
     .list article>b{
-
         width:76px;
         height:76px;
     }
 
     .list article>a{
-
         grid-column:2;
-
         text-align:center;
     }
-
 }
 
 
@@ -1277,14 +1205,11 @@ footer{
 
     .main-buttons,
     .support-buttons{
-
         grid-template-columns:1fr;
     }
 
     .actions .btn{
-
         width:100%;
-
         padding:13px;
     }
 
@@ -1292,7 +1217,6 @@ footer{
     /* ICONOS GRANDES */
 
     .circle{
-
         width:105px;
         height:105px;
     }
@@ -1305,22 +1229,17 @@ footer{
     /* LISTAS */
 
     .list article{
-
         grid-template-columns:68px 1fr;
-
         min-height:88px;
     }
 
     .list article>b{
-
         width:68px;
         height:68px;
     }
 
     .list article>a{
-
         grid-column:2;
-
         text-align:center;
     }
 
@@ -1334,5 +1253,4 @@ footer{
     .stats b{
         font-size:17px;
     }
-
 }
