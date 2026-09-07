@@ -2,175 +2,19 @@
 <html lang="es">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <meta
-        name="description"
-        content="Infinity Faucet - Faucets, minería y encuestas pagadas para ganar criptomonedas"
-    >
+    <meta name="description"
+        content="Infinity Faucet - Faucets, minería y encuestas pagadas para ganar criptomonedas">
 
     <title>Infinity Faucet | Gana Crypto Cada Día</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <style>
-
-        /* =========================
-           BOTONES DEL HERO
-        ========================= */
-
-        .actions {
-            display: grid;
-            grid-template-columns: auto auto;
-            gap: 12px;
-            margin-top: 28px;
-            width: max-content;
-        }
-
-
-        /* =========================
-           PRIMERA FILA
-           FAUCETS + MINERÍA
-        ========================= */
-
-        .actions .primary,
-        .actions .secondary {
-            grid-row: 1;
-        }
-
-
-        /* =========================
-           SEGUNDA FILA
-           DONACIONES
-        ========================= */
-
-        .actions .donate-btn,
-        .actions .paypal {
-            grid-row: 2;
-
-            background: linear-gradient(
-                135deg,
-                #ff8a00,
-                #ff5a00
-            );
-
-            color: #ffffff;
-
-            border: 1px solid #ff9a22;
-
-            box-shadow:
-                0 6px 20px #ff6a0038;
-
-            position: relative;
-
-            overflow: hidden;
-        }
-
-
-        /* =========================
-           HOVER DONACIONES
-        ========================= */
-
-        .actions .donate-btn:hover,
-        .actions .paypal:hover {
-
-            background: linear-gradient(
-                135deg,
-                #ff9d2e,
-                #ff6500
-            );
-
-            color: #ffffff;
-
-            border-color: #ffb45c;
-
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 9px 28px #ff6a0055;
-        }
-
-
-        /* =========================
-           EFECTO DE BRILLO
-        ========================= */
-
-        .actions .donate-btn::before,
-        .actions .paypal::before {
-
-            content: "";
-
-            position: absolute;
-
-            top: 0;
-            left: -120%;
-
-            width: 70%;
-            height: 100%;
-
-            background: linear-gradient(
-                90deg,
-                transparent,
-                #ffffff35,
-                transparent
-            );
-
-            transform: skewX(-20deg);
-
-            transition: left .6s ease;
-        }
-
-
-        .actions .donate-btn:hover::before,
-        .actions .paypal:hover::before {
-
-            left: 140%;
-        }
-
-
-        /* =========================
-           MÓVIL
-        ========================= */
-
-        @media (max-width: 650px) {
-
-            .actions {
-
-                display: grid;
-
-                grid-template-columns: 1fr;
-
-                width: 100%;
-
-                gap: 10px;
-            }
-
-
-            .actions .primary,
-            .actions .secondary,
-            .actions .donate-btn,
-            .actions .paypal {
-
-                grid-column: 1;
-
-                grid-row: auto;
-
-                width: 100%;
-
-                text-align: center;
-            }
-
-        }
-
-    </style>
-
 </head>
 
-
 <body>
-
 
 <!-- =========================
      HEADER
@@ -185,55 +29,24 @@
             <b>∞</b>
 
             <span>
-
-                <strong>INFINITY</strong>
-                <i>FAUCET</i>
-
-                <small>
-                    GANA CRYPTO CADA DÍA
-                </small>
-
+                <strong>INFINITY</strong> <i>FAUCET</i>
+                <small>GANA CRYPTO CADA DÍA</small>
             </span>
 
         </a>
 
-
         <nav id="nav">
 
-            <a href="#inicio">
-                INICIO
-            </a>
-
-            <a href="#faucets">
-                FAUCETS
-            </a>
-
-            <a href="#mineria">
-                MINERÍA
-            </a>
-
-            <a href="#encuestas">
-                ENCUESTAS
-            </a>
-
-            <a href="#recomendados">
-                RECOMENDADOS
-            </a>
-
-            <a href="#como-funciona">
-                CÓMO FUNCIONA
-            </a>
+            <a href="#inicio">INICIO</a>
+            <a href="#faucets">FAUCETS</a>
+            <a href="#mineria">MINERÍA</a>
+            <a href="#encuestas">ENCUESTAS</a>
+            <a href="#recomendados">RECOMENDADOS</a>
+            <a href="#como-funciona">CÓMO FUNCIONA</a>
 
         </nav>
 
-
-        <button
-            class="menu"
-            onclick="menu()"
-            aria-label="Abrir menú"
-        >
-            ☰
-        </button>
+        <button class="menu" onclick="menu()">☰</button>
 
     </div>
 
@@ -251,13 +64,11 @@
 
     <div class="wrap hero-grid">
 
-
         <div>
 
             <small class="eyebrow">
                 🚀 DIRECTORIO CRYPTO
             </small>
-
 
             <h1>
 
@@ -269,7 +80,6 @@
 
             </h1>
 
-
             <p>
                 Faucets, minería, encuestas y plataformas para ganar crypto,
                 reunidas en un solo lugar.
@@ -277,55 +87,49 @@
 
 
             <!-- =========================
-                 BOTONES
+                 BOTONES HERO
             ========================= -->
 
             <div class="actions">
 
+                <!-- BOTONES PRINCIPALES -->
 
-                <!-- FILA 1 -->
+                <div class="main-buttons">
 
-                <a
-                    class="btn primary"
-                    href="#faucets"
-                >
-                    💧 VER FAUCETS
-                </a>
+                    <a class="btn primary" href="#faucets">
+                        💧 VER FAUCETS
+                    </a>
 
+                    <a class="btn secondary" href="#mineria">
+                        ⛏ VER MINERÍA
+                    </a>
 
-                <a
-                    class="btn secondary"
-                    href="#mineria"
-                >
-                    ⛏ VER MINERÍA
-                </a>
+                </div>
 
 
-                <!-- FILA 2 -->
+                <!-- BOTONES DE DONACIÓN -->
 
-                <a
-                    class="btn donate-btn"
-                    href="donar.html"
-                >
-                    💜 DONAR CON CRYPTO
-                </a>
+                <div class="support-buttons">
 
+                    <a class="btn donate" href="donar.html">
+                        💜 DONAR CON CRYPTO
+                    </a>
 
-                <a
-                    class="btn paypal"
-                    href="https://paypal.me/BenjaminEstevez655?locale.x=es_XC&country.x=AR"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    💙 DONAR CON PAYPAL
-                </a>
+                    <a
+                        class="btn paypal"
+                        href="https://paypal.me/BenjaminEstevez655?locale.x=es_XC&country.x=AR"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        💙 DONAR CON PAYPAL
+                    </a>
 
+                </div>
 
             </div>
 
 
             <div class="trust">
-
 
                 <div>
 
@@ -333,9 +137,7 @@
 
                     <span>
 
-                        <b>
-                            Sitios seleccionados
-                        </b>
+                        <b>Sitios seleccionados</b>
 
                         <small>
                             Plataformas para explorar
@@ -352,9 +154,7 @@
 
                     <span>
 
-                        <b>
-                            Opciones crypto
-                        </b>
+                        <b>Opciones crypto</b>
 
                         <small>
                             Distintas formas de ganar
@@ -371,9 +171,7 @@
 
                     <span>
 
-                        <b>
-                            Actualizaciones
-                        </b>
+                        <b>Actualizaciones</b>
 
                         <small>
                             Nuevos sitios regularmente
@@ -382,7 +180,6 @@
                     </span>
 
                 </div>
-
 
             </div>
 
@@ -402,7 +199,6 @@
 
         </div>
 
-
     </div>
 
 </section>
@@ -414,12 +210,9 @@
 
 <section class="wrap stats">
 
-
     <div>
 
-        <b>
-            +12,450
-        </b>
+        <b>+12,450</b>
 
         <small>
             Usuarios
@@ -430,9 +223,7 @@
 
     <div>
 
-        <b>
-            +98,230
-        </b>
+        <b>+98,230</b>
 
         <small>
             Clics
@@ -443,9 +234,7 @@
 
     <div>
 
-        <b>
-            17+
-        </b>
+        <b>17+</b>
 
         <small>
             Sitios
@@ -456,16 +245,13 @@
 
     <div>
 
-        <b>
-            Activo
-        </b>
+        <b>Activo</b>
 
         <small>
             Directorio
         </small>
 
     </div>
-
 
 </section>
 
@@ -474,11 +260,7 @@
      FAUCETS
 ========================= -->
 
-<section
-    id="faucets"
-    class="wrap section"
->
-
+<section id="faucets" class="wrap section">
 
     <div class="title">
 
@@ -494,7 +276,6 @@
 
         </div>
 
-
         <a href="#faucets">
             VER TODOS →
         </a>
@@ -506,7 +287,7 @@
 
 
         <!-- =========================
-             1. VIEFAUCET
+             VIEFAUCET
         ========================= -->
 
         <article class="card featured">
@@ -520,31 +301,25 @@
 
             </div>
 
-
             <h3>
                 VieFaucet
             </h3>
-
 
             <div class="chips">
                 Crypto · Faucet
             </div>
 
-
             <p>
                 Faucet para obtener recompensas en diferentes criptomonedas.
             </p>
-
 
             <small>
                 WEB
             </small>
 
-
             <b>
                 viefaucet.com
             </b>
-
 
             <a
                 class="btn primary"
@@ -559,7 +334,7 @@
 
 
         <!-- =========================
-             2. FIREFAUCET
+             FIREFAUCET
         ========================= -->
 
         <article class="card">
@@ -573,31 +348,25 @@
 
             </div>
 
-
             <h3>
                 FireFaucet
             </h3>
-
 
             <div class="chips">
                 BTC · Crypto
             </div>
 
-
             <p>
                 Plataforma con distintas opciones para obtener criptomonedas.
             </p>
-
 
             <small>
                 WEB
             </small>
 
-
             <b>
                 firefaucet.win
             </b>
-
 
             <a
                 class="btn primary"
@@ -612,7 +381,7 @@
 
 
         <!-- =========================
-             3. COINTIPLY
+             COINTIPLY
         ========================= -->
 
         <article class="card">
@@ -626,31 +395,25 @@
 
             </div>
 
-
             <h3>
                 Cointiply
             </h3>
-
 
             <div class="chips">
                 BTC · FaucetPay
             </div>
 
-
             <p>
                 Faucet y plataforma con diferentes formas de obtener recompensas.
             </p>
-
 
             <small>
                 WEB
             </small>
 
-
             <b>
                 cointiply.com
             </b>
-
 
             <a
                 class="btn primary"
@@ -665,7 +428,7 @@
 
 
         <!-- =========================
-             4. FAUCETCRYPTO
+             FAUCETCRYPTO
         ========================= -->
 
         <article class="card">
@@ -679,31 +442,25 @@
 
             </div>
 
-
             <h3>
                 FaucetCrypto
             </h3>
-
 
             <div class="chips">
                 Crypto · Faucet
             </div>
 
-
             <p>
                 Faucet con diferentes tareas y recompensas en criptomonedas.
             </p>
-
 
             <small>
                 WEB
             </small>
 
-
             <b>
                 faucetcrypto.com
             </b>
-
 
             <a
                 class="btn primary"
@@ -718,7 +475,7 @@
 
 
         <!-- =========================
-             5. ADBTC
+             ADBTC
         ========================= -->
 
         <article class="card">
@@ -732,31 +489,25 @@
 
             </div>
 
-
             <h3>
                 AdBTC
             </h3>
-
 
             <div class="chips">
                 BTC · PTC
             </div>
 
-
             <p>
                 Plataforma enfocada en tareas y publicidad con recompensas.
             </p>
-
 
             <small>
                 WEB
             </small>
 
-
             <b>
                 adbtc.top
             </b>
-
 
             <a
                 class="btn primary"
@@ -771,7 +522,7 @@
 
 
         <!-- =========================
-             6. ROLLERCOIN
+             ROLLERCOIN
         ========================= -->
 
         <article class="card">
@@ -785,31 +536,25 @@
 
             </div>
 
-
             <h3>
                 RollerCoin
             </h3>
-
 
             <div class="chips">
                 BTC · Games
             </div>
 
-
             <p>
                 Juego de minería virtual con recompensas en criptomonedas.
             </p>
-
 
             <small>
                 WEB
             </small>
 
-
             <b>
                 rollercoin.com
             </b>
-
 
             <a
                 class="btn primary"
@@ -824,7 +569,7 @@
 
 
         <!-- =========================
-             7. SIMPLEBITS
+             SIMPLEBITS
         ========================= -->
 
         <article class="card">
@@ -838,31 +583,25 @@
 
             </div>
 
-
             <h3>
                 SimpleBits
             </h3>
-
 
             <div class="chips">
                 Crypto · Faucet
             </div>
 
-
             <p>
                 Plataforma de recompensas en criptomonedas.
             </p>
-
 
             <small>
                 WEB
             </small>
 
-
             <b>
                 simplebits.io
             </b>
-
 
             <a
                 class="btn primary"
@@ -877,7 +616,7 @@
 
 
         <!-- =========================
-             8. STAKECUBE
+             STAKECUBE
         ========================= -->
 
         <article class="card">
@@ -891,31 +630,25 @@
 
             </div>
 
-
             <h3>
                 StakeCube
             </h3>
-
 
             <div class="chips">
                 Crypto · Earn
             </div>
 
-
             <p>
                 Ecosistema de servicios y opciones relacionadas con criptomonedas.
             </p>
-
 
             <small>
                 WEB
             </small>
 
-
             <b>
                 stakecube.net
             </b>
-
 
             <a
                 class="btn primary"
@@ -930,7 +663,7 @@
 
 
         <!-- =========================
-             9. LITEPICK
+             LITEPICK
         ========================= -->
 
         <article class="card">
@@ -944,31 +677,25 @@
 
             </div>
 
-
             <h3>
                 LitePick
             </h3>
-
 
             <div class="chips">
                 LTC · Crypto
             </div>
 
-
             <p>
                 Plataforma de recompensas relacionada con criptomonedas.
             </p>
-
 
             <small>
                 WEB
             </small>
 
-
             <b>
                 litepick.io
             </b>
-
 
             <a
                 class="btn primary"
@@ -981,7 +708,6 @@
 
         </article>
 
-
     </div>
 
 </section>
@@ -991,11 +717,7 @@
      MINERÍA
 ========================= -->
 
-<section
-    id="mineria"
-    class="wrap section"
->
-
+<section id="mineria" class="wrap section">
 
     <div class="title">
 
@@ -1010,7 +732,6 @@
             </p>
 
         </div>
-
 
         <a href="#mineria">
             VER TODOS →
@@ -1035,7 +756,6 @@
 
             </b>
 
-
             <span>
 
                 <strong>
@@ -1049,7 +769,6 @@
                 </small>
 
             </span>
-
 
             <a
                 href="https://www.kryptex.com/?ref=af6f935f"
@@ -1075,7 +794,6 @@
 
             </b>
 
-
             <span>
 
                 <strong>
@@ -1089,7 +807,6 @@
                 </small>
 
             </span>
-
 
             <a
                 href="https://www.nicehash.com/"
@@ -1115,7 +832,6 @@
 
             </b>
 
-
             <span>
 
                 <strong>
@@ -1129,7 +845,6 @@
                 </small>
 
             </span>
-
 
             <a
                 href="https://unmineable.com/?ref=U-UP5ADS"
@@ -1155,7 +870,6 @@
 
             </b>
 
-
             <span>
 
                 <strong>
@@ -1170,7 +884,6 @@
 
             </span>
 
-
             <a
                 href="https://www.cudominer.com/?a=6g-kEI0UM"
                 target="_blank"
@@ -1181,7 +894,6 @@
 
         </article>
 
-
     </div>
 
 </section>
@@ -1191,11 +903,7 @@
      ENCUESTAS
 ========================= -->
 
-<section
-    id="encuestas"
-    class="wrap section"
->
-
+<section id="encuestas" class="wrap section">
 
     <div class="title">
 
@@ -1210,7 +918,6 @@
             </p>
 
         </div>
-
 
         <a href="#encuestas">
             VER TODOS →
@@ -1235,7 +942,6 @@
 
             </b>
 
-
             <span>
 
                 <strong>
@@ -1249,7 +955,6 @@
                 </small>
 
             </span>
-
 
             <a
                 href="https://www.ysense.com/"
@@ -1275,7 +980,6 @@
 
             </b>
 
-
             <span>
 
                 <strong>
@@ -1289,7 +993,6 @@
                 </small>
 
             </span>
-
 
             <a
                 href="https://www.prolific.com/"
@@ -1315,7 +1018,6 @@
 
             </b>
 
-
             <span>
 
                 <strong>
@@ -1329,7 +1031,6 @@
                 </small>
 
             </span>
-
 
             <a
                 href="https://www.swagbucks.com/"
@@ -1355,7 +1056,6 @@
 
             </b>
 
-
             <span>
 
                 <strong>
@@ -1370,7 +1070,6 @@
 
             </span>
 
-
             <a
                 href="https://www.toluna.com/"
                 target="_blank"
@@ -1381,7 +1080,6 @@
 
         </article>
 
-
     </div>
 
 </section>
@@ -1391,11 +1089,7 @@
      RECOMENDADOS
 ========================= -->
 
-<section
-    id="recomendados"
-    class="wrap section"
->
-
+<section id="recomendados" class="wrap section">
 
     <div class="recommend">
 
@@ -1403,14 +1097,12 @@
             Las mejores faucets de criptomonedas ⭐⭐⭐⭐⭐
         </h2>
 
-
         <p>
             Explora nuestras recomendaciones, compara las diferentes opciones
             y descubre nuevas formas de obtener Bitcoin, Litecoin, Dogecoin
             y otras criptomonedas realizando tareas sencillas, reclamando
             recompensas periódicas o viendo anuncios.
         </p>
-
 
         <a
             class="btn primary"
@@ -1428,11 +1120,7 @@
      COMO FUNCIONA
 ========================= -->
 
-<section
-    id="como-funciona"
-    class="wrap section"
->
-
+<section id="como-funciona" class="wrap section">
 
     <div class="how">
 
@@ -1442,15 +1130,11 @@
                 Cómo funciona
             </h2>
 
-
             <div class="steps">
-
 
                 <div>
 
-                    <b>
-                        1
-                    </b>
+                    <b>1</b>
 
                     <span>
 
@@ -1469,9 +1153,7 @@
 
                 <div>
 
-                    <b>
-                        2
-                    </b>
+                    <b>2</b>
 
                     <span>
 
@@ -1490,9 +1172,7 @@
 
                 <div>
 
-                    <b>
-                        3
-                    </b>
+                    <b>3</b>
 
                     <span>
 
@@ -1507,7 +1187,6 @@
                     </span>
 
                 </div>
-
 
             </div>
 
@@ -1529,25 +1208,13 @@
 
     <div class="wrap footer">
 
+        <a class="brand" href="index.html">
 
-        <a
-            class="brand"
-            href="index.html"
-        >
-
-            <b>
-                ∞
-            </b>
+            <b>∞</b>
 
             <span>
 
-                <strong>
-                    INFINITY
-                </strong>
-
-                <i>
-                    FAUCET
-                </i>
+                <strong>INFINITY</strong> <i>FAUCET</i>
 
                 <small>
                     GANA CRYPTO CADA DÍA
@@ -1588,7 +1255,6 @@
         <p>
             © <span id="year"></span> Infinity Faucet.
         </p>
-
 
     </div>
 
