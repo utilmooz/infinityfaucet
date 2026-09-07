@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta
+name="description"
+content="Apoya Infinity Faucet y ayuda a mantener y desarrollar nuestro proyecto crypto."
+>
+
+<title>Donar | Infinity Faucet</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ==================================================
+   PÁGINA DE DONACIONES
+================================================== */
+
+.donation-page{
+    min-height:calc(100vh - 74px);
+    padding:70px 0 90px;
+
+    background:
+    radial-gradient(
+        circle at 50% 0%,
+        #32207b55,
+        transparent 40%
+    );
+}
+
+
+/* ==================================================
+   HERO DONACIONES
+================================================== */
+
+.donation-hero{
+    text-align:center;
+    max-width:780px;
+    margin:0 auto 45px;
+}
+
+.donation-icon{
+    width:86px;
+    height:86px;
+
+    margin:0 auto 22px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:38px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #463cff,
+        #7935e7
+    );
+
+    box-shadow:
+    0 0 35px #593cff55;
+
+    border:1px solid #806cff;
+}
+
+.donation-hero h1{
+    margin:0 0 15px;
+
+    font-size:clamp(
+        38px,
+        5vw,
+        58px
+    );
+
+    line-height:1.05;
+}
+
+.donation-hero h1 span{
+    background:
+    linear-gradient(
+        90deg,
+        #a35aff,
+        #15bfe8
+    );
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+.donation-hero p{
+    color:#9fa9bd;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    max-width:650px;
+
+    margin:auto;
+}
+
+
+/* ==================================================
+   CONTENEDOR PRINCIPAL
+================================================== */
+
+.donation-box{
+    width:min(
+        850px,
+        92%
+    );
+
+    margin:auto;
+
+    background:#0b1222;
+
+    border:1px solid #202d49;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:
+    0 20px 60px #00000035;
+}
+
+
+/* ==================================================
+   TEXTO
+================================================== */
+
+.donation-box h2{
+    margin-top:0;
+
+    font-size:24px;
+}
+
+.donation-box p{
+    color:#98a3b8;
+
+    line-height:1.7;
+
+    font-size:13px;
+}
+
+
+/* ==================================================
+   BENEFICIOS
+================================================== */
+
+.support-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:12px;
+
+    margin:30px 0;
+}
+
+.support-item{
+    padding:20px 14px;
+
+    text-align:center;
+
+    background:#101a2e;
+
+    border:1px solid #1d2a45;
+
+    border-radius:12px;
+}
+
+.support-item .icon{
+    font-size:25px;
+
+    display:block;
+
+    margin-bottom:10px;
+}
+
+.support-item strong{
+    display:block;
+
+    font-size:11px;
+
+    margin-bottom:5px;
+}
+
+.support-item small{
+    color:#7f8ba2;
+
+    font-size:9px;
+
+    line-height:1.5;
+}
+
+
+/* ==================================================
+   OPCIONES DE DONACIÓN
+================================================== */
+
+.donation-options{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:30px;
+}
+
+.donation-option{
+    padding:25px;
+
+    border-radius:14px;
+
+    background:#0e1729;
+
+    border:1px solid #243250;
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.donation-option:hover{
+    transform:translateY(-4px);
+
+    border-color:#5948df;
+
+    box-shadow:
+    0 12px 35px #00000035;
+}
+
+.donation-option.paypal{
+    border-color:#214c83;
+}
+
+.donation-option.crypto{
+    border-color:#493b9c;
+}
+
+.option-icon{
+    font-size:32px;
+
+    margin-bottom:12px;
+}
+
+.donation-option h3{
+    margin:0 0 8px;
+
+    font-size:18px;
+}
+
+.donation-option p{
+    font-size:11px;
+
+    min-height:52px;
+}
+
+
+/* ==================================================
+   BOTONES DONACIÓN
+================================================== */
+
+.donation-button{
+    display:block;
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border-radius:9px;
+
+    text-align:center;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    margin-top:auto;
+
+    transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.donation-button:hover{
+    transform:translateY(-2px);
+}
+
+.paypal-button{
+    background:
+    linear-gradient(
+        100deg,
+        #087cff,
+        #0066d6
+    );
+
+    color:#fff;
+
+    box-shadow:
+    0 6px 20px #087cff22;
+}
+
+.crypto-button{
+    background:
+    linear-gradient(
+        100deg,
+        #6048ff,
+        #833ce7
+    );
+
+    color:#fff;
+
+    box-shadow:
+    0 6px 20px #6048ff22;
+}
+
+
+/* ==================================================
+   AVISO CRYPTO
+================================================== */
+
+.crypto-notice{
+    margin-top:14px;
+
+    padding:10px;
+
+    border-radius:7px;
+
+    background:#121c31;
+
+    border:1px solid #263654;
+
+    color:#7f8ba2;
+
+    font-size:9px;
+
+    text-align:center;
+}
+
+
+/* ==================================================
+   PRÓXIMA FAUCET
+================================================== */
+
+.future-faucet{
+    margin-top:35px;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    border:1px solid #4939a7;
+
+    background:
+    radial-gradient(
+        circle at 50% 0%,
+        #4330a52b,
+        transparent 65%
+    ),
+    #0c1426;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.future-badge{
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    background:#241d52;
+
+    border:1px solid #5d4bd0;
+
+    color:#a99cff;
+
+    font-size:9px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+}
+
+.future-faucet h2{
+    margin:5px 0 12px;
+
+    font-size:28px;
+}
+
+.future-faucet h2 span{
+    background:
+    linear-gradient(
+        90deg,
+        #a35aff,
+        #15bfe8
+    );
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+.future-faucet p{
+    max-width:650px;
+
+    margin:0 auto 22px;
+
+    color:#929db2;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+.future-features{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.future-features span{
+    padding:8px 12px;
+
+    border-radius:7px;
+
+    background:#111d33;
+
+    border:1px solid #253451;
+
+    color:#aab4c7;
+
+    font-size:10px;
+}
+
+
+/* ==================================================
+   MENSAJE FINAL
+================================================== */
+
+.thanks{
+    text-align:center;
+
+    margin-top:35px;
+
+    color:#7f8ba2;
+
+    font-size:11px;
+}
+
+.thanks strong{
+    display:block;
+
+    color:#fff;
+
+    font-size:14px;
+
+    margin-bottom:6px;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:800px){
+
+    .support-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:650px){
+
+    .donation-page{
+        padding:45px 0 65px;
+    }
+
+    .donation-box{
+        padding:22px;
+    }
+
+    .donation-options{
+        grid-template-columns:1fr;
+    }
+
+    .future-faucet{
+        padding:25px 18px;
+    }
+
+    .future-faucet h2{
+        font-size:24px;
+    }
+
+}
+
+@media(max-width:420px){
+
+    .support-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .donation-hero h1{
+        font-size:34px;
+    }
+
+    .donation-box{
+        padding:17px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header>
+
+<div class="wrap nav">
+
+
+<a class="brand" href="index.html">
+
+<b>∞</b>
+
+<span>
+
+<strong>INFINITY</strong> <i>FAUCET</i>
+
+<small>
+GANA CRYPTO CADA DÍA
+</small>
+
+</span>
+
+</a>
+
+
+<nav id="nav">
+
+<a href="index.html#inicio">
+INICIO
+</a>
+
+<a href="index.html#faucets">
+FAUCETS
+</a>
+
+<a href="index.html#mineria">
+MINERÍA
+</a>
+
+<a href="index.html#encuestas">
+ENCUESTAS
+</a>
+
+<a href="index.html#recomendados">
+RECOMENDADOS
+</a>
+
+<a href="index.html#como-funciona">
+CÓMO FUNCIONA
+</a>
+
+</nav>
+
+
+<button
+class="menu"
+onclick="menu()"
+>
+☰
+</button>
+
+
+</div>
+
+</header>
+
+
+
+<!-- ==================================================
+     CONTENIDO
+================================================== -->
+
+<main>
+
+<section class="donation-page">
+
+
+<!-- HERO -->
+
+<div class="donation-hero">
+
+<div class="donation-icon">
+❤️
+</div>
+
+
+<h1>
+
+Apoya
+
+<span>
+Infinity Faucet
+</span>
+
+</h1>
+
+
+<p>
+
+Si te gusta nuestro proyecto y querés ayudarnos
+a seguir creciendo, podés realizar una donación.
+Tu apoyo nos ayuda a mantener el sitio y continuar
+desarrollando nuevas funciones.
+
+</p>
+
+</div>
+
+
+
+<!-- CAJA -->
+
+<div class="donation-box">
+
+
+<h2>
+¿Por qué apoyar Infinity Faucet?
+</h2>
+
+
+<p>
+
+Infinity Faucet busca reunir en un solo lugar
+faucets, plataformas de minería, encuestas y
+otras oportunidades relacionadas con criptomonedas.
+
+Las donaciones son completamente voluntarias y
+nos ayudan a mantener y mejorar el proyecto.
+
+</p>
+
+
+
+<!-- BENEFICIOS -->
+
+<div class="support-grid">
+
+
+<div class="support-item">
+
+<span class="icon">
+🌐
+</span>
+
+<strong>
+Hosting y dominio
+</strong>
+
+<small>
+Mantener el sitio disponible.
+</small>
+
+</div>
+
+
+<div class="support-item">
+
+<span class="icon">
+🔧
+</span>
+
+<strong>
+Mantenimiento
+</strong>
+
+<small>
+Actualizar y mejorar la web.
+</small>
+
+</div>
+
+
+<div class="support-item">
+
+<span class="icon">
+🔎
+</span>
+
+<strong>
+Nuevas plataformas
+</strong>
+
+<small>
+Buscar nuevas oportunidades.
+</small>
+
+</div>
+
+
+<div class="support-item">
+
+<span class="icon">
+🚀
+</span>
+
+<strong>
+Desarrollo
+</strong>
+
+<small>
+Crear nuevas funciones.
+</small>
+
+</div>
+
+
+</div>
+
+
+
+<!-- OPCIONES -->
+
+<h2>
+Formas de apoyar
+</h2>
+
+
+<div class="donation-options">
+
+
+<!-- PAYPAL -->
+
+<div class="donation-option paypal">
+
+
+<div class="option-icon">
+💙
+</div>
+
+
+<h3>
+Donar con PayPal
+</h3>
+
+
+<p>
+
+Podés realizar una donación utilizando
+PayPal de forma rápida y sencilla.
+
+</p>
+
+
+<a
+class="donation-button paypal-button"
+href="https://paypal.me/BenjaminEstevez655?locale.x=es_XC&country.x=AR"
+target="_blank"
+rel="noopener"
+>
+
+💙 DONAR CON PAYPAL
+
+</a>
+
+
+</div>
+
+
+
+<!-- CRYPTO -->
+
+<div class="donation-option crypto">
+
+
+<div class="option-icon">
+💜
+</div>
+
+
+<h3>
+Donar con Crypto
+</h3>
+
+
+<p>
+
+Próximamente podrás realizar donaciones
+directamente mediante FaucetPay.
+
+</p>
+
+
+<button
+class="donation-button crypto-button"
+type="button"
+disabled
+style="opacity:.55;cursor:not-allowed;"
+>
+
+💜 PRÓXIMAMENTE
+
+</button>
+
+
+<div class="crypto-notice">
+
+Estamos preparando el sistema de
+donaciones crypto mediante FaucetPay.
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- FUTURA FAUCET -->
+
+<div class="future-faucet">
+
+
+<div class="future-badge">
+🚀 PRÓXIMAMENTE
+</div>
+
+
+<h2>
+
+Nuestra propia
+
+<span>
+Faucet
+</span>
+
+</h2>
+
+
+<p>
+
+Estamos trabajando en el desarrollo de nuestra
+propia faucet de Infinity Faucet.
+
+Nuestro objetivo es ofrecer a nuestra comunidad
+nuevas formas de obtener recompensas en
+criptomonedas y seguir ampliando las opciones
+disponibles dentro del proyecto.
+
+</p>
+
+
+<div class="future-features">
+
+<span>
+💧 Recompensas crypto
+</span>
+
+<span>
+🎁 Nuevas oportunidades
+</span>
+
+<span>
+⚡ Reclamos rápidos
+</span>
+
+<span>
+🚀 Nuevas funciones
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<!-- GRACIAS -->
+
+<div class="thanks">
+
+<strong>
+❤️ Gracias por apoyar Infinity Faucet
+</strong>
+
+Cada donación, grande o pequeña, contribuye
+a que el proyecto pueda seguir creciendo.
+
+</div>
+
+
+</div>
+
+
+</section>
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+<div class="wrap footer">
+
+
+<a class="brand" href="index.html">
+
+<b>∞</b>
+
+<span>
+
+<strong>INFINITY</strong> <i>FAUCET</i>
+
+<small>
+GANA CRYPTO CADA DÍA
+</small>
+
+</span>
+
+</a>
+
+
+<div>
+
+<a href="sobre-nosotros.html">
+Sobre nosotros
+</a>
+
+&nbsp;·&nbsp;
+
+<a href="contacto.html">
+Contacto
+</a>
+
+&nbsp;·&nbsp;
+
+<a href="terminos.html">
+Términos
+</a>
+
+&nbsp;·&nbsp;
+
+<a href="privacidad.html">
+Privacidad
+</a>
+
+</div>
+
+
+<p>
+
+© <span id="year"></span>
+Infinity Faucet.
+
+</p>
+
+
+</div>
+
+</footer>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+function menu(){
+
+    const nav = document.getElementById("nav");
+
+    if(nav.style.display === "flex"){
+
+        nav.style.display = "none";
+
+    }else{
+
+        nav.style.display = "flex";
+
+    }
+
+}
+
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+
+</body>
+
+</html>
