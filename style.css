@@ -575,25 +575,35 @@ nav a:hover{
     color:#8f99ad;
 }
 
+.recommend li{
+    color:#a9b2c5;
+    margin-bottom:8px;
+}
+
 
 /* =========================
    COMO FUNCIONA
 ========================= */
 
 .how{
-    display:grid;
-
-    grid-template-columns:1.5fr .8fr;
+    width:100%;
 
     border:1px solid #202b45;
 
     border-radius:12px;
 
     overflow:hidden;
+
+    background:#0b1222;
 }
 
 .how>div{
-    padding:25px;
+    padding:30px;
+}
+
+.how h2{
+    margin-top:0;
+    margin-bottom:25px;
 }
 
 .steps{
@@ -601,17 +611,19 @@ nav a:hover{
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:15px;
+    gap:25px;
 }
 
 .steps>div{
     display:flex;
-    gap:9px;
+    gap:12px;
+
+    align-items:flex-start;
 }
 
 .steps b{
-    min-width:34px;
-    height:34px;
+    min-width:38px;
+    height:38px;
 
     border:1px solid #7358ff;
 
@@ -621,39 +633,27 @@ nav a:hover{
     place-items:center;
 
     color:#a594ff;
+
+    font-size:14px;
 }
 
 .steps strong,
 .steps small{
     display:block;
-    font-size:10px;
+}
+
+.steps strong{
+    font-size:12px;
 }
 
 .steps small{
     color:#8993a7;
-    margin-top:3px;
-}
 
+    margin-top:5px;
 
-/* =========================
-   AVISO
-========================= */
+    font-size:10px;
 
-aside{
-    padding:25px;
-
-    background:#12101c;
-
-    border-left:1px solid #222b43;
-}
-
-aside h3{
-    color:#ffc82b;
-}
-
-aside p{
-    color:#a6afc0;
-    font-size:11px;
+    line-height:1.5;
 }
 
 
@@ -724,14 +724,13 @@ footer{
         border:0;
     }
 
-    .two,
-    .how{
+    .two{
         grid-template-columns:1fr;
     }
 
-    aside{
-        border-left:0;
-        border-top:1px solid #222b43;
+    .steps{
+        grid-template-columns:1fr;
+        gap:20px;
     }
 
 }
@@ -804,6 +803,16 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .how>div{
+        padding:22px;
+    }
+
+    .title{
+        align-items:flex-start;
+        gap:15px;
+        flex-direction:column;
+    }
+
     .footer{
         align-items:flex-start;
         flex-direction:column;
@@ -841,6 +850,14 @@ footer{
     .list article>a{
         grid-column:2;
         text-align:center;
+    }
+
+    .stats{
+        padding:15px;
+    }
+
+    .stats b{
+        font-size:17px;
     }
 
 }
