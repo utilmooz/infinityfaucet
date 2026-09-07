@@ -362,8 +362,10 @@ nav a:hover{
 ========================= */
 
 .circle{
-    width:58px;
-    height:58px;
+    width:82px;
+    height:82px;
+
+    flex-shrink:0;
 
     border-radius:50%;
 
@@ -378,17 +380,40 @@ nav a:hover{
     background:#17213a;
 
     border:1px solid #273657;
+
+    padding:3px;
 }
+
+
+/*
+   IMPORTANTE:
+   El PNG ocupa casi todo
+   el espacio disponible.
+*/
 
 .circle img{
     width:100%;
     height:100%;
 
+    max-width:100%;
+    max-height:100%;
+
     object-fit:contain;
 
-    padding:6px;
+    padding:0;
+
+    margin:0;
 
     display:block;
+}
+
+
+/* =========================
+   LOGOS PNG GRANDES
+========================= */
+
+.circle img[src$=".png"]{
+    object-fit:contain;
 }
 
 
@@ -464,9 +489,9 @@ nav a:hover{
 
     display:grid;
 
-    grid-template-columns:40px 1fr auto;
+    grid-template-columns:52px 1fr auto;
 
-    gap:11px;
+    gap:13px;
 
     align-items:center;
 
@@ -486,10 +511,10 @@ nav a:hover{
 ========================= */
 
 .list article>b{
-    width:40px;
-    height:40px;
+    width:52px;
+    height:52px;
 
-    border-radius:8px;
+    border-radius:10px;
 
     background:#148fd8;
 
@@ -499,15 +524,24 @@ nav a:hover{
     justify-content:center;
 
     overflow:hidden;
+
+    padding:2px;
+
+    flex-shrink:0;
 }
 
 .list article>b img{
     width:100%;
     height:100%;
 
+    max-width:100%;
+    max-height:100%;
+
     object-fit:contain;
 
-    padding:5px;
+    padding:0;
+
+    margin:0;
 
     border-radius:8px;
 
@@ -818,6 +852,24 @@ footer{
         flex-direction:column;
     }
 
+    /*
+       Logos grandes en celular
+    */
+
+    .circle{
+        width:86px;
+        height:86px;
+    }
+
+    .list article{
+        grid-template-columns:52px 1fr;
+    }
+
+    .list article>a{
+        grid-column:2;
+        text-align:center;
+    }
+
 }
 
 
@@ -843,8 +895,18 @@ footer{
         max-width:290px;
     }
 
+    .circle{
+        width:82px;
+        height:82px;
+    }
+
     .list article{
-        grid-template-columns:40px 1fr;
+        grid-template-columns:50px 1fr;
+    }
+
+    .list article>b{
+        width:50px;
+        height:50px;
     }
 
     .list article>a{
