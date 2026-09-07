@@ -148,10 +148,16 @@ nav a:hover{
     max-width:600px;
 }
 
+
+/* =========================
+   BOTONES HERO
+========================= */
+
 .actions{
     display:flex;
     gap:12px;
-    margin:24px 0;
+    margin:28px 0;
+    flex-wrap:wrap;
 }
 
 .btn{
@@ -161,7 +167,22 @@ nav a:hover{
     font-size:11px;
     display:inline-block;
     text-align:center;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease,
+        background .2s ease;
 }
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   BOTÓN VER FAUCETS
+========================= */
 
 .primary{
     background:linear-gradient(
@@ -169,11 +190,152 @@ nav a:hover{
         #463cff,
         #7935e7
     );
+
+    color:#fff;
+
+    border:1px solid #6659ff;
+
+    box-shadow:
+        0 6px 20px #463cff33;
 }
 
-.secondary{
-    border:1px solid #29334b;
+.primary:hover{
+    box-shadow:
+        0 8px 28px #463cff66;
 }
+
+
+/* =========================
+   BOTÓN VER MINERÍA
+========================= */
+
+.secondary{
+    background:#10182b;
+
+    border:1px solid #53617e;
+
+    color:#ffffff;
+
+    box-shadow:
+        0 5px 18px #00000033;
+}
+
+.secondary:hover{
+    background:#17223a;
+
+    border-color:#7d8fb8;
+
+    box-shadow:
+        0 8px 25px #00000055;
+}
+
+
+/* =========================
+   BOTÓN DONAR CON CRYPTO
+========================= */
+
+.donate{
+    background:linear-gradient(
+        100deg,
+        #7c35e8,
+        #b34cff
+    );
+
+    border:1px solid #b86aff;
+
+    color:#fff;
+
+    box-shadow:
+        0 6px 22px #a23dff44;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.donate:hover{
+    box-shadow:
+        0 8px 30px #a23dff77;
+
+    border-color:#d29aff;
+}
+
+
+/* =========================
+   BOTÓN DONAR PAYPAL
+========================= */
+
+.paypal{
+    background:linear-gradient(
+        100deg,
+        #0070ba,
+        #009cde
+    );
+
+    border:1px solid #32b9f5;
+
+    color:#fff;
+
+    box-shadow:
+        0 6px 22px #008bd044;
+}
+
+.paypal:hover{
+    background:linear-gradient(
+        100deg,
+        #0084c9,
+        #12a9e8
+    );
+
+    border-color:#67d2ff;
+
+    box-shadow:
+        0 8px 30px #008bd077;
+}
+
+
+/* =========================
+   EFECTO RESALTADO DONAR
+========================= */
+
+.donate,
+.paypal{
+    font-weight:800;
+}
+
+.donate::before,
+.paypal::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:70%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #ffffff33,
+        transparent
+    );
+
+    transform:skewX(-20deg);
+
+    transition:left .6s ease;
+}
+
+.donate:hover::before,
+.paypal:hover::before{
+    left:130%;
+}
+
+
+/* =========================
+   TRUST
+========================= */
 
 .trust{
     display:flex;
@@ -388,11 +550,6 @@ nav a:hover{
     position:relative;
 }
 
-
-/*
-   EL PNG OCUPA TODO EL CÍRCULO
-*/
-
 .circle img{
     width:100%;
     height:100%;
@@ -406,14 +563,6 @@ nav a:hover{
 
     display:block;
 }
-
-
-/*
-   Algunos PNG tienen espacio
-   transparente alrededor.
-   Esta regla permite que
-   aprovechen mejor el área.
-*/
 
 .circle img[src$=".png"]{
     transform:scale(1.12);
@@ -489,7 +638,6 @@ nav a:hover{
 
 .list{
     display:grid;
-
     gap:10px;
 }
 
@@ -611,7 +759,6 @@ nav a:hover{
 
 .list article>a:hover{
     background:#5346db;
-
     color:#fff;
 }
 
@@ -774,7 +921,6 @@ footer{
 
     .art{
         min-height:280px;
-
         margin-top:20px;
     }
 
@@ -784,7 +930,6 @@ footer{
 
     .stats{
         grid-template-columns:repeat(2,1fr);
-
         gap:15px;
     }
 
@@ -798,7 +943,6 @@ footer{
 
     .steps{
         grid-template-columns:1fr;
-
         gap:25px;
     }
 
@@ -866,7 +1010,6 @@ footer{
 
     .art{
         min-height:240px;
-
         margin-top:10px;
     }
 
@@ -876,7 +1019,6 @@ footer{
 
     .trust{
         display:grid;
-
         grid-template-columns:1fr;
     }
 
@@ -898,16 +1040,29 @@ footer{
 
     .title{
         align-items:flex-start;
-
         gap:15px;
-
         flex-direction:column;
     }
 
     .footer{
         align-items:flex-start;
-
         flex-direction:column;
+    }
+
+
+    /* =========================
+       BOTONES HERO CELULAR
+    ========================= */
+
+    .actions{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+        width:100%;
+    }
+
+    .actions .btn{
+        width:100%;
     }
 
 
@@ -918,7 +1073,6 @@ footer{
     .circle{
         width:115px;
         height:115px;
-
         margin-bottom:10px;
     }
 
@@ -933,7 +1087,6 @@ footer{
 
     .list article{
         grid-template-columns:76px 1fr;
-
         min-height:95px;
     }
 
@@ -944,7 +1097,6 @@ footer{
 
     .list article>a{
         grid-column:2;
-
         text-align:center;
     }
 
@@ -994,7 +1146,6 @@ footer{
 
     .list article{
         grid-template-columns:68px 1fr;
-
         min-height:88px;
     }
 
@@ -1005,7 +1156,6 @@ footer{
 
     .list article>a{
         grid-column:2;
-
         text-align:center;
     }
 
