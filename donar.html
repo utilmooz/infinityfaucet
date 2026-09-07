@@ -7,204 +7,106 @@
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta
-name="description"
-content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a desarrollar nuestra futura faucet."
->
+<meta name="description"
+content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a desarrollar nuestra propia faucet.">
 
-<title>Donar con Crypto | Infinity Faucet</title>
+<title>Donar | Infinity Faucet</title>
 
 <link rel="stylesheet" href="style.css">
-
 
 <style>
 
 /* =========================
-   DONACIONES
+   DONAR
 ========================= */
 
-.donation-page{
-    min-height:calc(100vh - 74px);
+.donate-hero{
+    padding:75px 0 45px;
 
-    padding:70px 0 80px;
+    text-align:center;
 
     background:
     radial-gradient(
-        circle at 50% 0%,
-        #32207b33,
-        transparent 38%
+        circle at 50% 20%,
+        #32207b55,
+        transparent 45%
     );
 }
 
-
-/* =========================
-   ENCABEZADO
-========================= */
-
-.donation-header{
-    text-align:center;
-
-    max-width:760px;
-
-    margin:0 auto 45px;
-}
-
-.donation-icon{
-    width:76px;
-    height:76px;
-
-    margin:0 auto 20px;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:50%;
-
-    background:
-    linear-gradient(
-        135deg,
-        #463cff,
-        #7935e7
-    );
-
-    box-shadow:
-    0 0 35px #493f9e66;
-
-    font-size:34px;
-}
-
-.donation-header .eyebrow{
-    display:block;
-
+.donate-hero .eyebrow{
     color:#9c86ff;
-
-    font-size:11px;
-
     font-weight:bold;
-
+    font-size:11px;
     letter-spacing:1px;
-
-    margin-bottom:12px;
 }
 
-.donation-header h1{
-    margin:0 0 16px;
-
-    font-size:clamp(34px,5vw,52px);
-
+.donate-hero h1{
+    font-size:clamp(38px,5vw,58px);
+    margin:15px 0;
     line-height:1.05;
 }
 
-.donation-header h1 span{
-    background:
-    linear-gradient(
+.donate-hero h1 span{
+    background:linear-gradient(
         90deg,
         #a35aff,
         #15bfe8
     );
 
     background-clip:text;
-
     -webkit-background-clip:text;
 
     color:transparent;
 }
 
-.donation-header p{
-    margin:0 auto;
-
+.donate-hero p{
     max-width:650px;
+    margin:0 auto;
 
     color:#a9b2c5;
 
-    font-size:15px;
-
-    line-height:1.7;
+    font-size:16px;
+    line-height:1.6;
 }
 
 
 /* =========================
-   CONTENEDOR PRINCIPAL
+   DONACIONES CRYPTO
 ========================= */
 
-.donation-container{
-    width:min(900px,92%);
+.crypto-box{
+    max-width:900px;
 
-    margin:auto;
-}
+    margin:25px auto 0;
 
+    padding:30px;
 
-/* =========================
-   CAJA MOTIVO
-========================= */
-
-.support-box{
     background:#0b1222;
 
-    border:1px solid #1b2742;
+    border:1px solid #29375a;
 
     border-radius:16px;
 
-    padding:28px;
-
-    margin-bottom:25px;
-
     box-shadow:
-    0 15px 40px #00000022;
+    0 15px 45px #00000033;
 }
 
-.support-box h2{
-    margin:0 0 12px;
-
-    font-size:21px;
-}
-
-.support-box p{
-    margin:0;
-
-    color:#99a3b7;
-
-    line-height:1.7;
-
-    font-size:12px;
-}
-
-.support-list{
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:12px;
-
-    margin-top:22px;
-}
-
-.support-item{
-    padding:16px;
-
-    border-radius:10px;
-
-    background:#10192d;
-
-    border:1px solid #202d4b;
-
+.crypto-box h2{
     text-align:center;
+
+    margin:0 0 8px;
+
+    font-size:24px;
 }
 
-.support-item strong{
-    display:block;
+.crypto-box>p{
+    text-align:center;
 
-    margin-bottom:6px;
-
-    font-size:12px;
-}
-
-.support-item small{
     color:#8993a7;
 
-    font-size:10px;
+    font-size:12px;
 
-    line-height:1.5;
+    margin-bottom:25px;
 }
 
 
@@ -212,66 +114,22 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
    WALLETS
 ========================= */
 
-.crypto-box{
-    background:#0b1222;
-
-    border:1px solid #1b2742;
-
-    border-radius:16px;
-
-    padding:28px;
-
-    box-shadow:
-    0 15px 40px #00000022;
-}
-
-.crypto-title{
-    text-align:center;
-
-    margin-bottom:25px;
-}
-
-.crypto-title h2{
-    margin:0 0 8px;
-
-    font-size:23px;
-}
-
-.crypto-title p{
-    margin:0;
-
-    color:#8993a7;
-
-    font-size:11px;
-}
-
-
-/* =========================
-   WALLET CARD
-========================= */
-
 .wallets{
     display:grid;
 
-    gap:14px;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
 }
 
 .wallet{
-    display:grid;
+    background:#101a30;
 
-    grid-template-columns:64px 1fr;
-
-    gap:16px;
-
-    align-items:center;
-
-    padding:17px;
-
-    background:#10192d;
-
-    border:1px solid #202d4b;
+    border:1px solid #202e4c;
 
     border-radius:12px;
+
+    padding:18px;
 
     transition:
     transform .2s ease,
@@ -280,96 +138,91 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
 }
 
 .wallet:hover{
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
-    border-color:#493f9e;
+    border-color:#5346db;
 
     box-shadow:
     0 10px 30px #00000033;
 }
 
+.wallet-top{
+    display:flex;
 
-/* =========================
-   ICONO WALLET
-========================= */
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:12px;
+}
 
 .wallet-icon{
-    width:64px;
-    height:64px;
+    width:38px;
+    height:38px;
 
-    border-radius:12px;
+    border-radius:50%;
 
     display:grid;
 
     place-items:center;
 
-    font-size:27px;
+    background:#182541;
 
-    font-weight:bold;
+    font-size:18px;
 
-    background:#17213a;
-
-    border:1px solid #2a395d;
+    flex-shrink:0;
 }
 
+.wallet strong{
+    font-size:14px;
 
-/* =========================
-   INFORMACIÓN WALLET
-========================= */
-
-.wallet-info h3{
-    margin:0 0 3px;
-
-    font-size:15px;
-}
-
-.wallet-info small{
     display:block;
+}
 
+.wallet small{
     color:#8791a5;
 
     font-size:9px;
-
-    margin-bottom:9px;
 }
 
 .wallet-address{
-    width:100%;
+    background:#080d19;
 
-    padding:11px;
-
-    background:#080e1c;
-
-    border:1px solid #1e2a44;
+    border:1px solid #1c2942;
 
     border-radius:7px;
 
-    color:#bfc8da;
+    padding:10px;
 
-    font-size:10px;
+    color:#b7c0d2;
+
+    font-size:9px;
 
     line-height:1.5;
 
     word-break:break-all;
 
-    margin-bottom:10px;
+    min-height:55px;
+
+    display:flex;
+
+    align-items:center;
 }
 
+.copy-btn{
+    width:100%;
 
-/* =========================
-   BOTÓN COPIAR
-========================= */
+    margin-top:10px;
 
-.copy-wallet{
+    padding:9px;
+
     border:1px solid #5346db;
 
-    background:#171433;
+    background:transparent;
 
     color:#a59bff;
 
     border-radius:7px;
-
-    padding:9px 13px;
 
     font-size:9px;
 
@@ -379,146 +232,160 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
 
     transition:
     background .2s ease,
-    color .2s ease,
-    border-color .2s ease;
+    color .2s ease;
 }
 
-.copy-wallet:hover{
+.copy-btn:hover{
     background:#5346db;
-
-    border-color:#7358ff;
 
     color:#fff;
 }
 
-.copy-wallet.copied{
-    background:#17352d;
-
-    border-color:#2cc995;
-
-    color:#67e8c0;
-}
-
 
 /* =========================
-   AVISO IMPORTANTE
-========================= */
-
-.warning{
-    margin-top:18px;
-
-    padding:14px 16px;
-
-    border-radius:9px;
-
-    background:#15172b;
-
-    border:1px solid #302d57;
-
-    color:#9fa8bb;
-
-    font-size:10px;
-
-    line-height:1.6;
-}
-
-.warning strong{
-    color:#c8c0ff;
-}
-
-
-/* =========================
-   FUTURA FAUCET
+   PROXIMAMENTE
 ========================= */
 
 .future{
-    margin-top:25px;
+    max-width:900px;
 
-    padding:30px;
+    margin:25px auto;
+
+    padding:35px;
 
     text-align:center;
-
-    border-radius:16px;
 
     background:
     linear-gradient(
         135deg,
-        #11172c,
-        #171433
+        #111a35,
+        #0c1224
     );
 
-    border:1px solid #40398b;
+    border:1px solid #4c3ed4;
+
+    border-radius:16px;
+
+    position:relative;
+
+    overflow:hidden;
 
     box-shadow:
-    0 15px 40px #00000022;
+    0 15px 45px #00000033;
+}
+
+.future:before{
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:#533cff22;
+
+    filter:blur(45px);
+
+    top:-100px;
+    right:-60px;
 }
 
 .future-icon{
-    font-size:30px;
+    width:64px;
+    height:64px;
 
-    margin-bottom:10px;
+    margin:0 auto 15px;
+
+    border-radius:50%;
+
+    display:grid;
+
+    place-items:center;
+
+    background:#171d45;
+
+    border:1px solid #6354ff;
+
+    font-size:28px;
+
+    position:relative;
 }
 
 .future h2{
     margin:0 0 10px;
 
-    font-size:22px;
+    font-size:25px;
+
+    position:relative;
+}
+
+.future h2 span{
+    color:#a594ff;
 }
 
 .future p{
-    max-width:650px;
+    max-width:680px;
 
-    margin:0 auto 20px;
+    margin:0 auto;
 
-    color:#99a3b7;
+    color:#9ca6ba;
 
-    font-size:11px;
+    font-size:12px;
 
     line-height:1.7;
+
+    position:relative;
 }
 
 .future strong{
-    color:#b8aeff;
+    color:#fff;
 }
 
 
 /* =========================
-   VOLVER
+   INFO
 ========================= */
 
-.back{
-    text-align:center;
+.donation-info{
+    max-width:900px;
 
-    margin-top:28px;
+    margin:0 auto 50px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:14px;
 }
 
-.back a{
-    display:inline-block;
+.info-card{
+    padding:20px;
 
-    border:1px solid #29334b;
+    background:#0b1222;
 
-    border-radius:8px;
+    border:1px solid #1b2742;
 
-    padding:11px 18px;
+    border-radius:12px;
 
-    color:#9da7bb;
+    text-align:center;
+}
+
+.info-card b{
+    display:block;
+
+    font-size:12px;
+
+    margin-bottom:7px;
+}
+
+.info-card small{
+    color:#8993a7;
 
     font-size:10px;
 
-    font-weight:bold;
-
-    transition:
-    background .2s ease,
-    color .2s ease,
-    border-color .2s ease;
-}
-
-.back a:hover{
-    background:#161f34;
-
-    border-color:#5346db;
-
-    color:#fff;
+    line-height:1.5;
 }
 
 
@@ -526,72 +393,42 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
    RESPONSIVE
 ========================= */
 
-@media(max-width:650px){
+@media(max-width:800px){
 
-    .donation-page{
-        padding:45px 0 60px;
+    .wallets{
+        grid-template-columns:1fr;
     }
 
-    .donation-header{
-        margin-bottom:30px;
+    .donation-info{
+        grid-template-columns:1fr;
     }
 
-    .donation-header h1{
-        font-size:38px;
-    }
-
-    .donation-header p{
-        font-size:13px;
-    }
-
-    .support-box,
     .crypto-box{
-        padding:20px;
+        padding:22px;
     }
 
-    .support-list{
-        grid-template-columns:1fr;
-    }
-
-    .wallet{
-        grid-template-columns:1fr;
-
-        text-align:center;
-    }
-
-    .wallet-icon{
-        margin:auto;
-    }
-
-    .wallet-info{
-        width:100%;
-    }
-
-    .copy-wallet{
-        width:100%;
+    .future{
+        padding:28px 20px;
     }
 
 }
 
+@media(max-width:500px){
 
-@media(max-width:420px){
-
-    .donation-header h1{
-        font-size:33px;
+    .donate-hero{
+        padding:50px 0 30px;
     }
 
-    .support-box,
-    .crypto-box,
-    .future{
-        padding:18px;
+    .donate-hero h1{
+        font-size:38px;
     }
 
-    .wallet{
-        padding:14px;
+    .donate-hero p{
+        font-size:14px;
     }
 
-    .wallet-address{
-        font-size:9px;
+    .crypto-box{
+        padding:17px;
     }
 
 }
@@ -612,14 +449,14 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
 
 <div class="wrap nav">
 
-
 <a class="brand" href="index.html">
 
 <b>∞</b>
 
 <span>
 
-<strong>INFINITY</strong> <i>FAUCET</i>
+<strong>INFINITY</strong>
+<i>FAUCET</i>
 
 <small>GANA CRYPTO CADA DÍA</small>
 
@@ -630,37 +467,22 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
 
 <nav id="nav">
 
-<a href="index.html#inicio">
-INICIO
-</a>
+<a href="index.html#inicio">INICIO</a>
 
-<a href="index.html#faucets">
-FAUCETS
-</a>
+<a href="index.html#faucets">FAUCETS</a>
 
-<a href="index.html#mineria">
-MINERÍA
-</a>
+<a href="index.html#mineria">MINERÍA</a>
 
-<a href="index.html#encuestas">
-ENCUESTAS
-</a>
+<a href="index.html#encuestas">ENCUESTAS</a>
 
-<a href="index.html#recomendados">
-RECOMENDADOS
-</a>
+<a href="index.html#recomendados">RECOMENDADOS</a>
 
-<a href="index.html#como-funciona">
-CÓMO FUNCIONA
-</a>
+<a href="index.html#como-funciona">CÓMO FUNCIONA</a>
 
 </nav>
 
 
-<button class="menu" onclick="menu()">
-☰
-</button>
-
+<button class="menu" onclick="menu()">☰</button>
 
 </div>
 
@@ -668,114 +490,32 @@ CÓMO FUNCIONA
 
 
 
-<!-- =========================
-     CONTENIDO
-========================= -->
-
-<main class="donation-page">
-
-
-<div class="donation-container">
+<main>
 
 
 <!-- =========================
-     ENCABEZADO
+     HERO DONACIONES
 ========================= -->
 
-<div class="donation-header">
+<section class="donate-hero">
 
-<div class="donation-icon">
-💎
+<div class="wrap">
+
+<div class="eyebrow">
+💜 APOYA INFINITY FAUCET
 </div>
 
-<span class="eyebrow">
-APOYA EL PROYECTO
-</span>
-
 <h1>
-
-Ayuda a crecer a
-
-<span>
-Infinity Faucet
-</span>
-
+Ayúdanos a construir
+<br>
+<span>Infinity Faucet</span>
 </h1>
 
 <p>
-
-Si nuestro directorio te resulta útil y quieres apoyar
-su desarrollo, puedes realizar una donación utilizando
-criptomonedas. Cada aporte ayuda a mantener el proyecto
-y a seguir incorporando nuevas oportunidades.
-
+Si quieres apoyar el proyecto, puedes realizar una donación
+en criptomonedas. Cada aporte nos ayuda a seguir desarrollando
+el proyecto y preparar nuevas oportunidades para nuestra comunidad.
 </p>
-
-</div>
-
-
-
-<!-- =========================
-     PARA QUÉ DONAR
-========================= -->
-
-<section class="support-box">
-
-<h2>
-🚀 ¿Por qué apoyar Infinity Faucet?
-</h2>
-
-<p>
-
-Infinity Faucet nace con el objetivo de reunir en un solo
-lugar diferentes formas de ganar criptomonedas. Las
-donaciones nos ayudan a mantener el proyecto, mejorar
-la página y trabajar en nuevas funciones para la comunidad.
-
-</p>
-
-
-<div class="support-list">
-
-
-<div class="support-item">
-
-<strong>
-🌐 Mantener el sitio
-</strong>
-
-<small>
-Hosting, dominio y mantenimiento del proyecto.
-</small>
-
-</div>
-
-
-<div class="support-item">
-
-<strong>
-⚙️ Mejorar la plataforma
-</strong>
-
-<small>
-Nuevas funciones y mejoras para los usuarios.
-</small>
-
-</div>
-
-
-<div class="support-item">
-
-<strong>
-🚀 Futura Faucet
-</strong>
-
-<small>
-Desarrollo de nuestra propia faucet.
-</small>
-
-</div>
-
 
 </div>
 
@@ -787,224 +527,229 @@ Desarrollo de nuestra propia faucet.
      DONAR CON CRYPTO
 ========================= -->
 
-<section class="crypto-box">
+<section class="wrap section">
 
-
-<div class="crypto-title">
+<div class="crypto-box">
 
 <h2>
-💰 Donar con Crypto
+₿ Donar con Crypto
 </h2>
 
 <p>
-Selecciona una criptomoneda y copia la dirección correspondiente.
+Selecciona la criptomoneda que quieras utilizar y envía tu donación
+a la dirección correspondiente.
 </p>
-
-</div>
-
 
 
 <div class="wallets">
 
 
-<!-- =========================
-     USDT
-========================= -->
+<!-- USDT -->
 
 <div class="wallet">
+
+<div class="wallet-top">
 
 <div class="wallet-icon">
 💵
 </div>
 
+<span>
 
-<div class="wallet-info">
-
-<h3>
-USDT (TRC20)
-</h3>
+<strong>USDT</strong>
 
 <small>
-Dirección para donaciones
+Tether
 </small>
 
+</span>
 
-<div class="wallet-address">
+</div>
+
+<div class="wallet-address" id="usdt">
 TJcrTGUgDQU9xrnwN7D3soSoDRpi3PYNZi
 </div>
 
-
-<button
-class="copy-wallet"
-onclick="copyWallet('TJcrTGUgDQU9xrnwN7D3soSoDRpi3PYNZi', this)"
->
-📋 COPIAR DIRECCIÓN
+<button class="copy-btn"
+onclick="copyWallet('usdt',this)">
+COPIAR DIRECCIÓN
 </button>
 
 </div>
 
-</div>
 
 
-
-<!-- =========================
-     BTC
-========================= -->
+<!-- BTC -->
 
 <div class="wallet">
+
+<div class="wallet-top">
 
 <div class="wallet-icon">
 ₿
 </div>
 
+<span>
 
-<div class="wallet-info">
-
-<h3>
-Bitcoin (BTC)
-</h3>
+<strong>BTC</strong>
 
 <small>
-Dirección para donaciones
+Bitcoin
 </small>
 
+</span>
 
-<div class="wallet-address">
+</div>
+
+<div class="wallet-address" id="btc">
 bc1qhj3kkeww9yy76hpc8vvj7lwch49larzf7wluh4
 </div>
 
-
-<button
-class="copy-wallet"
-onclick="copyWallet('bc1qhj3kkeww9yy76hpc8vvj7lwch49larzf7wluh4', this)"
->
-📋 COPIAR DIRECCIÓN
+<button class="copy-btn"
+onclick="copyWallet('btc',this)">
+COPIAR DIRECCIÓN
 </button>
 
 </div>
 
-</div>
 
 
-
-<!-- =========================
-     LTC
-========================= -->
+<!-- LTC -->
 
 <div class="wallet">
+
+<div class="wallet-top">
 
 <div class="wallet-icon">
 Ł
 </div>
 
+<span>
 
-<div class="wallet-info">
-
-<h3>
-Litecoin (LTC)
-</h3>
+<strong>LTC</strong>
 
 <small>
-Dirección para donaciones
+Litecoin
 </small>
 
+</span>
 
-<div class="wallet-address">
+</div>
+
+<div class="wallet-address" id="ltc">
 ltc1qj4fsess2l8eymxqdqfhktkjxur0yqxm0ru4nta
 </div>
 
-
-<button
-class="copy-wallet"
-onclick="copyWallet('ltc1qj4fsess2l8eymxqdqfhktkjxur0yqxm0ru4nta', this)"
->
-📋 COPIAR DIRECCIÓN
+<button class="copy-btn"
+onclick="copyWallet('ltc',this)">
+COPIAR DIRECCIÓN
 </button>
 
 </div>
 
-</div>
-
 
 </div>
 
-
-
-<!-- =========================
-     ADVERTENCIA
-========================= -->
-
-<div class="warning">
-
-<strong>⚠️ Importante:</strong>
-Antes de enviar una donación, verifica que la
-criptomoneda y la red utilizada sean compatibles
-con la dirección indicada. Una transferencia enviada
-a una dirección o red incorrecta podría perderse.
-
 </div>
-
 
 </section>
 
 
 
 <!-- =========================
-     FUTURA FAUCET
+     PRÓXIMAMENTE
 ========================= -->
 
-<section class="future">
+<section class="wrap">
+
+<div class="future">
 
 <div class="future-icon">
 🚀
 </div>
 
 <h2>
-Próximamente: Nuestra propia Faucet
+Próximamente:
+<span>nuestra propia Faucet</span>
 </h2>
 
 <p>
 
-Estamos trabajando para que <strong>Infinity Faucet</strong>
-no sea solamente un directorio, sino que próximamente
-cuente con su propia faucet, donde los usuarios puedan
-obtener recompensas directamente desde nuestra plataforma.
+Estamos trabajando para lanzar
+<strong>Infinity Faucet</strong>,
+una plataforma propia donde nuestra comunidad podrá
+obtener recompensas en criptomonedas y acceder a nuevas
+formas de generar ganancias.
+
+<br><br>
+
+Las donaciones nos ayudan a seguir avanzando con el desarrollo,
+infraestructura y mantenimiento del proyecto.
+
+<br><br>
+
+<strong>
+Muy pronto podrás ganar crypto directamente desde
+Infinity Faucet.
+</strong>
 
 </p>
 
-<p>
-
-Las donaciones contribuyen a que podamos avanzar en este
-proyecto, cubrir los costos necesarios y desarrollar nuevas
-funciones para nuestra comunidad.
-
-</p>
-
-<a
-class="btn primary"
-href="index.html"
->
-VOLVER A INFINITY FAUCET
-</a>
+</div>
 
 </section>
 
 
 
 <!-- =========================
-     VOLVER
+     INFORMACIÓN
 ========================= -->
 
-<div class="back">
+<section class="wrap section">
 
-<a href="index.html">
-← VOLVER AL INICIO
-</a>
+<div class="donation-info">
+
+
+<div class="info-card">
+
+<b>🔐 Donación directa</b>
+
+<small>
+Las donaciones se envían directamente a las direcciones
+de las wallets indicadas arriba.
+</small>
+
+</div>
+
+
+<div class="info-card">
+
+<b>🌐 Proyecto independiente</b>
+
+<small>
+Infinity Faucet es un proyecto independiente enfocado
+en reunir oportunidades relacionadas con criptomonedas.
+</small>
+
+</div>
+
+
+<div class="info-card">
+
+<b>🚀 Más oportunidades</b>
+
+<small>
+Nuestro objetivo es seguir incorporando nuevas plataformas
+y desarrollar nuestra propia faucet.
+</small>
 
 </div>
 
 
 </div>
+
+</section>
+
 
 </main>
 
@@ -1025,7 +770,8 @@ VOLVER A INFINITY FAUCET
 
 <span>
 
-<strong>INFINITY</strong> <i>FAUCET</i>
+<strong>INFINITY</strong>
+<i>FAUCET</i>
 
 <small>
 GANA CRYPTO CADA DÍA
@@ -1034,7 +780,6 @@ GANA CRYPTO CADA DÍA
 </span>
 
 </a>
-
 
 
 <div>
@@ -1064,7 +809,6 @@ Privacidad
 </div>
 
 
-
 <p>
 © <span id="year"></span> Infinity Faucet.
 </p>
@@ -1076,75 +820,38 @@ Privacidad
 
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
-/* =========================
-   COPIAR WALLET
-========================= */
+function copyWallet(id,button){
 
-function copyWallet(address, button){
+const address =
+document.getElementById(id).innerText.trim();
 
-    navigator.clipboard.writeText(address)
-    .then(function(){
+navigator.clipboard.writeText(address);
 
-        const original = button.innerHTML;
+const original =
+button.innerText;
 
-        button.innerHTML = "✓ DIRECCIÓN COPIADA";
+button.innerText =
+"✓ COPIADO";
 
-        button.classList.add("copied");
+setTimeout(function(){
 
-        setTimeout(function(){
+button.innerText =
+original;
 
-            button.innerHTML = original;
-
-            button.classList.remove("copied");
-
-        },2000);
-
-    })
-    .catch(function(){
-
-        alert("No se pudo copiar la dirección. Puedes seleccionarla manualmente.");
-
-    });
+},2000);
 
 }
 
-
-/* =========================
-   AÑO AUTOMÁTICO
-========================= */
 
 document.getElementById("year").textContent =
 new Date().getFullYear();
 
-
-/* =========================
-   MENÚ MOBILE
-========================= */
-
-function menu(){
-
-    const nav = document.getElementById("nav");
-
-    if(nav.style.display === "flex"){
-
-        nav.style.display = "none";
-
-    }else{
-
-        nav.style.display = "flex";
-
-    }
-
-}
-
 </script>
 
+
+<script src="script.js"></script>
 
 </body>
 
