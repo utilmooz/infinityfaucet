@@ -21,7 +21,7 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
 ========================= */
 
 .donate-hero{
-    padding:75px 0 45px;
+    padding:55px 0 35px;
 
     text-align:center;
 
@@ -67,6 +67,142 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
 
     font-size:16px;
     line-height:1.6;
+}
+
+
+/* =========================
+   AVISO PROYECTO
+========================= */
+
+.project-notice{
+    max-width:900px;
+
+    margin:10px auto 25px;
+
+    padding:24px 28px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #171441,
+        #0d1830
+    );
+
+    border:1px solid #6655ff;
+
+    border-radius:16px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 40px #00000044,
+    0 0 30px #4d3cff22;
+}
+
+.project-notice:before{
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:#664cff22;
+
+    filter:blur(40px);
+
+    top:-90px;
+    left:-60px;
+}
+
+.project-notice:after{
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:#15bfe811;
+
+    filter:blur(40px);
+
+    bottom:-100px;
+    right:-60px;
+}
+
+.notice-icon{
+    width:58px;
+    height:58px;
+
+    margin:0 auto 12px;
+
+    border-radius:50%;
+
+    display:grid;
+
+    place-items:center;
+
+    background:#19194a;
+
+    border:1px solid #735eff;
+
+    font-size:26px;
+
+    position:relative;
+
+    z-index:1;
+}
+
+.project-notice h2{
+    margin:0 0 8px;
+
+    font-size:24px;
+
+    position:relative;
+
+    z-index:1;
+}
+
+.project-notice h2 span{
+    background:linear-gradient(
+        90deg,
+        #a35aff,
+        #15bfe8
+    );
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+.project-notice p{
+    max-width:700px;
+
+    margin:0 auto;
+
+    color:#a9b2c5;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    position:relative;
+
+    z-index:1;
+}
+
+.project-notice strong{
+    color:#fff;
 }
 
 
@@ -243,7 +379,7 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
 
 
 /* =========================
-   PROXIMAMENTE
+   PRÓXIMAMENTE
 ========================= */
 
 .future{
@@ -411,12 +547,16 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
         padding:28px 20px;
     }
 
+    .project-notice{
+        padding:22px 18px;
+    }
+
 }
 
 @media(max-width:500px){
 
     .donate-hero{
-        padding:50px 0 30px;
+        padding:45px 0 25px;
     }
 
     .donate-hero h1{
@@ -429,6 +569,10 @@ content="Apoya Infinity Faucet mediante donaciones en criptomonedas y ayuda a de
 
     .crypto-box{
         padding:17px;
+    }
+
+    .project-notice h2{
+        font-size:21px;
     }
 
 }
@@ -515,6 +659,38 @@ Ayúdanos a construir
 Si quieres apoyar el proyecto, puedes realizar una donación
 en criptomonedas. Cada aporte nos ayuda a seguir desarrollando
 el proyecto y preparar nuevas oportunidades para nuestra comunidad.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     AVISO: NUESTRA FAUCET
+========================= -->
+
+<section class="wrap">
+
+<div class="project-notice">
+
+<div class="notice-icon">
+🚀
+</div>
+
+<h2>
+Estamos creando nuestra
+<span>propia Faucet</span>
+</h2>
+
+<p>
+Actualmente estamos trabajando en el desarrollo de
+<strong>Infinity Faucet</strong>, nuestra propia plataforma
+para que puedas ganar criptomonedas directamente desde nuestro sitio.
+<br><br>
+Las donaciones ayudan a financiar el desarrollo,
+la infraestructura, el mantenimiento y las mejoras de la plataforma.
 </p>
 
 </div>
