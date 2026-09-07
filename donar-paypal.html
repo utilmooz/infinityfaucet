@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description"
+content="Apoya Infinity Faucet mediante PayPal y ayúdanos a desarrollar nuestra propia faucet de criptomonedas.">
+
+<title>Donar con PayPal | Infinity Faucet</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =========================
+   PÁGINA DONAR PAYPAL
+========================= */
+
+.donate-hero{
+    padding:75px 0 45px;
+
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle at 50% 20%,
+        #32207b55,
+        transparent 45%
+    );
+}
+
+.donate-hero .eyebrow{
+    color:#9c86ff;
+
+    font-weight:bold;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+}
+
+.donate-hero h1{
+    font-size:clamp(38px,5vw,58px);
+
+    margin:15px 0;
+
+    line-height:1.05;
+}
+
+.donate-hero h1 span{
+    background:linear-gradient(
+        90deg,
+        #a35aff,
+        #15bfe8
+    );
+
+    background-clip:text;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+.donate-hero p{
+    max-width:650px;
+
+    margin:0 auto;
+
+    color:#a9b2c5;
+
+    font-size:16px;
+
+    line-height:1.6;
+}
+
+
+/* =========================
+   BLOQUE PAYPAL
+========================= */
+
+.paypal-box{
+
+    max-width:760px;
+
+    margin:25px auto;
+
+    padding:42px 35px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        145deg,
+        #101a31,
+        #0b1222
+    );
+
+    border:1px solid #26385e;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 18px 55px #00000044;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.paypal-box:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    background:#2879ff18;
+
+    filter:blur(50px);
+
+    top:-120px;
+
+    right:-80px;
+}
+
+.paypal-icon{
+
+    width:78px;
+    height:78px;
+
+    margin:0 auto 18px;
+
+    border-radius:18px;
+
+    display:grid;
+
+    place-items:center;
+
+    background:#0d63d8;
+
+    border:1px solid #4a96ff;
+
+    box-shadow:
+    0 10px 30px #1468d544;
+
+    font-size:38px;
+
+    font-weight:bold;
+
+    position:relative;
+}
+
+.paypal-box h2{
+
+    margin:0 0 10px;
+
+    font-size:27px;
+
+    position:relative;
+}
+
+.paypal-box h2 span{
+
+    color:#5ca8ff;
+}
+
+.paypal-box>p{
+
+    max-width:560px;
+
+    margin:0 auto 25px;
+
+    color:#929db2;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    position:relative;
+}
+
+
+/* =========================
+   BOTÓN PAYPAL
+========================= */
+
+.paypal-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 28px;
+
+    border-radius:9px;
+
+    background:
+    linear-gradient(
+        100deg,
+        #0879e8,
+        #154de0
+    );
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    border:1px solid #459bff;
+
+    box-shadow:
+    0 8px 25px #075de044;
+
+    transition:
+
+    transform .2s ease,
+
+    box-shadow .2s ease,
+
+    filter .2s ease;
+
+    position:relative;
+}
+
+.paypal-btn:hover{
+
+    transform:translateY(-3px);
+
+    filter:brightness(1.1);
+
+    box-shadow:
+    0 12px 32px #075de066;
+}
+
+.paypal-note{
+
+    margin-top:15px;
+
+    color:#6f7c94;
+
+    font-size:9px;
+
+    position:relative;
+}
+
+
+/* =========================
+   PRÓXIMAMENTE
+========================= */
+
+.future{
+
+    max-width:900px;
+
+    margin:25px auto;
+
+    padding:38px 35px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #111a35,
+        #0c1224
+    );
+
+    border:1px solid #4c3ed4;
+
+    border-radius:16px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 45px #00000033;
+}
+
+.future:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:230px;
+    height:230px;
+
+    border-radius:50%;
+
+    background:#533cff22;
+
+    filter:blur(50px);
+
+    top:-110px;
+
+    right:-70px;
+}
+
+.future-icon{
+
+    width:66px;
+    height:66px;
+
+    margin:0 auto 16px;
+
+    border-radius:50%;
+
+    display:grid;
+
+    place-items:center;
+
+    background:#171d45;
+
+    border:1px solid #6354ff;
+
+    font-size:28px;
+
+    position:relative;
+}
+
+.future h2{
+
+    margin:0 0 12px;
+
+    font-size:26px;
+
+    position:relative;
+}
+
+.future h2 span{
+
+    color:#a594ff;
+}
+
+.future p{
+
+    max-width:690px;
+
+    margin:0 auto;
+
+    color:#9ca6ba;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    position:relative;
+}
+
+.future strong{
+
+    color:#fff;
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.donation-info{
+
+    max-width:900px;
+
+    margin:0 auto 50px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:14px;
+}
+
+.info-card{
+
+    padding:20px;
+
+    background:#0b1222;
+
+    border:1px solid #1b2742;
+
+    border-radius:12px;
+
+    text-align:center;
+}
+
+.info-card b{
+
+    display:block;
+
+    font-size:12px;
+
+    margin-bottom:7px;
+}
+
+.info-card small{
+
+    color:#8993a7;
+
+    font-size:10px;
+
+    line-height:1.5;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:800px){
+
+    .donation-info{
+
+        grid-template-columns:1fr;
+    }
+
+    .paypal-box{
+
+        padding:32px 22px;
+    }
+
+    .future{
+
+        padding:30px 20px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .donate-hero{
+
+        padding:50px 0 30px;
+    }
+
+    .donate-hero h1{
+
+        font-size:38px;
+    }
+
+    .donate-hero p{
+
+        font-size:14px;
+    }
+
+    .paypal-box{
+
+        padding:28px 17px;
+    }
+
+    .paypal-btn{
+
+        width:100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="wrap nav">
+
+<a class="brand" href="index.html">
+
+<b>∞</b>
+
+<span>
+
+<strong>INFINITY</strong>
+<i>FAUCET</i>
+
+<small>GANA CRYPTO CADA DÍA</small>
+
+</span>
+
+</a>
+
+
+<nav id="nav">
+
+<a href="index.html#inicio">INICIO</a>
+
+<a href="index.html#faucets">FAUCETS</a>
+
+<a href="index.html#mineria">MINERÍA</a>
+
+<a href="index.html#encuestas">ENCUESTAS</a>
+
+<a href="index.html#recomendados">RECOMENDADOS</a>
+
+<a href="index.html#como-funciona">CÓMO FUNCIONA</a>
+
+</nav>
+
+
+<button class="menu" onclick="menu()">☰</button>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="donate-hero">
+
+<div class="wrap">
+
+<div class="eyebrow">
+💙 APOYA INFINITY FAUCET
+</div>
+
+<h1>
+
+Ayúdanos a construir
+
+<br>
+
+<span>Infinity Faucet</span>
+
+</h1>
+
+<p>
+
+Tu apoyo nos permite seguir desarrollando el proyecto,
+mantener nuestro directorio y trabajar en nuevas
+oportunidades para nuestra comunidad crypto.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PAYPAL
+========================= -->
+
+<section class="wrap section">
+
+<div class="paypal-box">
+
+
+<div class="paypal-icon">
+P
+</div>
+
+
+<h2>
+
+Donar con <span>PayPal</span>
+
+</h2>
+
+
+<p>
+
+Puedes apoyar el proyecto realizando una donación
+directamente mediante PayPal.
+
+Cada aporte, sin importar el monto, nos ayuda a seguir
+trabajando en el desarrollo de Infinity Faucet.
+
+</p>
+
+
+<a
+class="paypal-btn"
+href="https://paypal.me/BenjaminEstevez655?locale.x=es_XC&country.x=AR"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+💳 DONAR AHORA CON PAYPAL ↗
+
+</a>
+
+
+<div class="paypal-note">
+
+Serás dirigido directamente a PayPal para completar tu donación.
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PRÓXIMAMENTE
+========================= -->
+
+<section class="wrap">
+
+<div class="future">
+
+
+<div class="future-icon">
+🚀
+</div>
+
+
+<h2>
+
+Próximamente:
+
+<span>nuestra propia Faucet</span>
+
+</h2>
+
+
+<p>
+
+Estamos trabajando para crear
+<strong>nuestra propia faucet de criptomonedas</strong>,
+donde los usuarios podrán acceder a nuevas formas
+de obtener recompensas.
+
+<br><br>
+
+Nuestro objetivo es crear una plataforma propia,
+estable y pensada para nuestra comunidad.
+
+<br><br>
+
+<strong>
+Muy pronto podrás ganar crypto directamente
+desde Infinity Faucet.
+</strong>
+
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     INFORMACIÓN
+========================= -->
+
+<section class="wrap section">
+
+<div class="donation-info">
+
+
+<div class="info-card">
+
+<b>🔐 Donación directa</b>
+
+<small>
+
+Tu donación se realiza directamente a través
+de PayPal.
+
+</small>
+
+</div>
+
+
+<div class="info-card">
+
+<b>🚀 Nuevo proyecto</b>
+
+<small>
+
+Estamos trabajando en nuestra propia faucet
+para ampliar las oportunidades de nuestra comunidad.
+
+</small>
+
+</div>
+
+
+<div class="info-card">
+
+<b>💜 Apoya el proyecto</b>
+
+<small>
+
+Cada aporte nos ayuda con el desarrollo,
+infraestructura y mantenimiento de Infinity Faucet.
+
+</small>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="wrap footer">
+
+
+<a class="brand" href="index.html">
+
+<b>∞</b>
+
+<span>
+
+<strong>INFINITY</strong>
+<i>FAUCET</i>
+
+<small>
+GANA CRYPTO CADA DÍA
+</small>
+
+</span>
+
+</a>
+
+
+<div>
+
+<a href="sobre-nosotros.html">
+Sobre nosotros
+</a>
+
+·
+
+<a href="contacto.html">
+Contacto
+</a>
+
+·
+
+<a href="terminos.html">
+Términos
+</a>
+
+·
+
+<a href="privacidad.html">
+Privacidad
+</a>
+
+</div>
+
+
+<p>
+
+© <span id="year"></span> Infinity Faucet.
+
+</p>
+
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
